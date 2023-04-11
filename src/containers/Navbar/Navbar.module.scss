@@ -1,0 +1,38 @@
+@import "../../styles/global.scss";
+
+.root {
+  position: fixed;
+  //   background: $firstColor;
+
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100vw;
+
+  color: $white;
+
+  .mobileNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    @include media-tabletLg {
+      padding: 20px 35px;
+    }
+
+    .left {
+      .logo {
+        width: 50px;
+      }
+    }
+
+    .right {
+      .menuIcon {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}

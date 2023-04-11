@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,700&display=swap");
+@import "./mixins.scss";
+@import "./vars.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+dl,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: inline-block;
+
+  font-size: inherit;
+  text-align: inherit;
+  text-decoration: none;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  text-transform: uppercase;
+  font-family: "Montserrat", "sans-serif";
+
+  cursor: pointer;
+  color: currentColor;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Oswald", "sans-serif";
+}
+
+p,
+h3 {
+  font-family: "Source Sans Pro", "sans-serif";
+}

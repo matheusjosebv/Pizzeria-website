@@ -1,0 +1,25 @@
+//BREAKPOINTS
+
+$breakpoint-tabletSm: 550px;
+$breakpoint-tabletLg: 750px;
+$breakpoint-desktopSm: 950px;
+$breakpoint-desktopMd: 1100px;
+
+// COLORS
+
+$black: #000;
+$white: #fff;
+$gray: gray;
+$light-gray: #eeeeee;
+$red: #ff3131;
+
+$firstColor: #e4032f;
+$secondColor: #fd0d3c;
+$thirdColor: #121212;
+$forthColor: #f7f6f2;
+$fifthColor: #cbcbcb;
+
+// EASES
+
+$sidebar-entry: cubic-bezier(0.3, 0, 0, 1);
+$sidebar-exit: cubic-bezier(0.85, 0, 0.85, 0.85);
