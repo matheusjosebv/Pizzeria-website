@@ -1,11 +1,18 @@
 import css from "./HomeHero.module.scss";
-import pizzaImg from "../../assets/images/pizzaHomeHero.png";
+
+import Route from "../Route/Route";
 import { FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
-export default function HomeHero() {
+export default function HomeHero({
+  bgImg,
+  title,
+  description,
+  firstButton,
+  secondButton,
+}) {
   return (
     <main className={css.root}>
-      <div className={css.wrapper}>
+      <div className={css.wrapper} style={{ backgroundImage: `url(${bgImg})` }}>
         <div className={css.blackBackground} />
         <div className={css.herobar}>
           <div className={css.left}>
@@ -30,27 +37,27 @@ export default function HomeHero() {
         </div>
 
         <div className={css.routes}>
-          <h3 className={css.route}>Home</h3>
-          <h3 className={css.route}>Menu</h3>
-          <h3 className={css.route}>Offers</h3>
-          <h3 className={css.route}>Contact</h3>
-          <h3 className={css.route}>About</h3>
+          <Route to="/" name="home" className={css.route} />
+          <Route to="/menu" name="menu" className={css.route} />
+          <Route to="/offers" name="offers" className={css.route} />
+          <Route to="/about" name="about" className={css.route} />
+          <Route to="/contact" name="contact" className={css.route} />
         </div>
 
-        <h1 className={css.title}>Authentic Italian Pizzeria</h1>
-        <p className={css.description}>
-          Et praesent nulla urna consequat dui arcu cursus diam fringilla libero
-          risus, aliquam diam, aliquam ullamcorper urna pulvinar velit
-          suspendisse aliquam lacus sollicitudin mauris.
-        </p>
-        <div className={css.buttons}>
-          <button className={css.button}>Book a Table</button>
-          <button className={css.button}>Order Online</button>
-        </div>
+        {title && <h1 className={css.title}>{title}</h1>}
 
-        <div className={css.pizzaContainer}>
-          <img src={pizzaImg} alt="pizza" className={css.pizza} />
-        </div>
+        {description && <p className={css.description}>{description}</p>}
+
+        {(firstButton || secondButton) && (
+          <div className={css.buttons}>
+            {firstButton && (
+              <button className={css.button}>{firstButton}</button>
+            )}
+            {secondButton && (
+              <button className={css.button}>{secondButton}</button>
+            )}
+          </div>
+        )}
       </div>
     </main>
   );

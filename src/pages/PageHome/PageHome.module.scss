@@ -1,9 +1,42 @@
 @import "../../styles/global.scss";
 
 .root {
-  background: $forthColor;
+  background: $fifthColor;
   min-height: 100vh;
 
-  .hero {
+  .features {
+    position: relative;
+
+    .pizzaContainer {
+      z-index: 1;
+      position: absolute;
+
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include media-desktopSm {
+        top: -235px;
+      }
+
+      .pizza {
+        width: 200px;
+        height: 200px;
+
+        @include media-desktopSm {
+          width: 470px;
+          height: 470px;
+        }
+      }
+    }
+
+    .highlights {
+      display: flex;
+      padding: 250px 0 0;
+
+      :nth-child(2) {
+        margin: 50px 0 0;
+      }
+    }
   }
 }

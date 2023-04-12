@@ -2,14 +2,22 @@
 
 .root {
   position: fixed;
-  //   background: $firstColor;
 
   top: 0;
   left: 0;
   z-index: 9;
   width: 100vw;
+  transform: translateY(-100%);
+  opacity: 0;
 
   color: $white;
+  transition: 0.3s background, 0.3s opacity;
+
+  &.showNavbar {
+    background: $firstColor;
+    transform: translateY(0);
+    opacity: 1;
+  }
 
   .mobileNavbar {
     display: flex;
