@@ -1,5 +1,5 @@
 import css from "./PageContact.module.scss";
-import bgImg from "../../assets/images/ContactHero.jpeg";
+import bgImg from "../../assets/images/contactHero.jpeg";
 import Hero from "../../components/Hero/Hero";
 
 export default function PageContact() {
