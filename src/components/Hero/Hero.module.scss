@@ -1,4 +1,274 @@
 @import "../../styles/global.scss";
 
 .root {
+  color: $white;
+  text-align: center;
+
+  .wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    border-bottom-left-radius: 60% 8%;
+    border-bottom-right-radius: 60% 8%;
+
+    padding: 0 25px 0;
+
+    @include media-tabletSm {
+      padding: 0 30px;
+    }
+
+    @include media-tabletLg {
+      padding: 0 50px;
+    }
+
+    @include media-desktopSm {
+      padding: 0 70px;
+    }
+
+    @include media-desktopMd {
+      padding: 0 70px;
+    }
+
+    .herobar {
+      position: relative;
+
+      z-index: 1;
+      width: 100%;
+      padding: 25px 50px 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include media-desktopMd {
+        padding: 25px 70px 50px;
+      }
+
+      .left {
+        display: none;
+
+        @include media-tabletLg {
+          display: unset;
+        }
+        .socialMedia {
+          display: flex;
+          gap: 20px;
+
+          .socialIcon {
+            width: 18px;
+            height: 18px;
+
+            cursor: pointer;
+            color: $sixthColor;
+            transition: 0.3s transform, 0.3s color;
+
+            &:hover {
+              color: $white;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      .centre {
+        .logo {
+          cursor: pointer;
+        }
+
+        @include media-tabletLg {
+          position: absolute;
+
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .right {
+        .mobileMenu {
+          width: 25px;
+          height: 25px;
+
+          cursor: pointer;
+
+          @include media-tabletLg {
+            display: none;
+          }
+        }
+
+        .downloadApp {
+          display: none;
+
+          padding: 13px 13px;
+          border-radius: 5px;
+          border: 1px solid $white;
+
+          font-weight: 600;
+          line-height: 13px;
+          letter-spacing: 2px;
+          font-size: 10px;
+
+          cursor: pointer;
+          background: transparent;
+          transition: 0.2s color, 0.2s background;
+          &:hover {
+            background: $white;
+            color: $black;
+          }
+
+          @include media-tabletLg {
+            display: flex;
+          }
+
+          @include media-desktopSm {
+            padding: 13px 23px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .routes {
+      display: none;
+
+      @include media-tabletLg {
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        gap: 30px;
+      }
+    }
+
+    .title {
+      z-index: 1;
+      font-size: 56px;
+      font-weight: 500;
+      line-height: 1.4em;
+
+      @include media-tabletSm {
+        font-size: 72px;
+        margin: 80px 0 0;
+      }
+
+      @include media-desktopSm {
+        font-size: 96px;
+        margin: 100px 0 0;
+      }
+    }
+
+    .desc {
+      z-index: 1;
+      margin: 20px 0 0;
+      font-size: 15px;
+      line-height: 1.6em;
+
+      @include media-tabletSm {
+        font-size: 16px;
+      }
+
+      @include media-desktopSm {
+        font-size: 17px;
+      }
+
+      @include media-desktopMd {
+        width: 500px;
+      }
+    }
+
+    .btns {
+      z-index: 1;
+      width: 100%;
+      margin: 30px 0 150px 0;
+
+      @include media-tabletSm {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      @include media-desktopSm {
+        margin: 30px 0 350px 0;
+      }
+
+      .btn {
+        display: block;
+
+        width: 100%;
+        padding: 13px 23px;
+        margin: 30px 0 0;
+        border-radius: 5px;
+
+        font-weight: 600;
+        line-height: 13px;
+        letter-spacing: 2px;
+
+        font-size: 14px;
+
+        @include media-tabletSm {
+          width: auto;
+        }
+
+        &:first-child {
+          background: $firstColor;
+          transition: 0.2s background;
+
+          &:hover {
+            background: $secondColor;
+          }
+        }
+
+        &:last-child {
+          transition: 0.2s color, 0.2s background;
+          border: 1px solid $white;
+
+          &:hover {
+            background: $white;
+            color: $black;
+          }
+        }
+      }
+    }
+
+    .pizzaContainer {
+      z-index: 1;
+      position: absolute;
+
+      bottom: -100px;
+
+      @include media-desktopSm {
+        bottom: -235px;
+      }
+
+      .pizza {
+        width: 200px;
+        height: 200px;
+
+        @include media-desktopSm {
+          width: 470px;
+          height: 470px;
+        }
+      }
+    }
+
+    .blackBackground {
+      z-index: 0;
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 60% 8%;
+      border-bottom-right-radius: 60% 8%;
+
+      opacity: 0.6;
+      background-color: $black;
+    }
+  }
 }

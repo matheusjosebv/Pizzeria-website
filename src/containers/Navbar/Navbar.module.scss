@@ -6,18 +6,12 @@
   top: 0;
   left: 0;
   z-index: 9;
-  width: 100vw;
-  transform: translateY(-100%);
   opacity: 0;
+  width: 100vw;
+  background: $firstColor;
 
   color: $white;
-  transition: 0.3s background, 0.3s opacity;
-
-  &.showNavbar {
-    background: $firstColor;
-    transform: translateY(0);
-    opacity: 1;
-  }
+  box-shadow: 0 0 12px 0 rgb(0, 0, 0, 0.25);
 
   .mobileNavbar {
     display: flex;
@@ -33,13 +27,106 @@
     .left {
       .logo {
         width: 50px;
+        cursor: pointer;
       }
     }
 
     .right {
-      .menuIcon {
+      display: flex;
+      align-items: center;
+
+      .routes {
+        display: none;
+
+        gap: 25px;
+        margin: 0 50px 0 0;
+
+        @include media-tabletLg {
+          display: flex;
+        }
+
+        .route {
+          color: $white;
+        }
+      }
+
+      .downloadApp {
+        display: none;
+
+        padding: 18px 22px;
+        border-radius: 5px;
+        border: 1px solid $white;
+
+        font-weight: 600;
+        line-height: 13px;
+        letter-spacing: 2px;
+
+        cursor: pointer;
+        background: transparent;
+        transition: 0.2s color, 0.2s background;
+
+        &:hover {
+          background: $white;
+          color: $black;
+        }
+
+        @include media-tabletLg {
+          display: flex;
+        }
+
+        @include media-desktopSm {
+          padding: 12px 15px;
+        }
+
+        .icons {
+          @include media-tabletLg {
+            position: relative;
+
+            .icon {
+              position: absolute;
+
+              left: 50%;
+              transform: translate(-50%, -50%);
+
+              width: 18px;
+              height: 18px;
+              margin: 0 0 0 1px;
+            }
+
+            .googleIcon {
+              margin: 0 0 0 2px;
+            }
+          }
+
+          @include media-desktopSm {
+            display: none;
+          }
+        }
+
+        > p {
+          display: none;
+
+          @include media-desktopSm {
+            display: flex;
+
+            font-family: "Montserrat";
+            font-size: 10px;
+          }
+
+          @include media-desktopMd {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .mobileMenu {
         width: 25px;
         height: 25px;
+        cursor: pointer;
+
+        @include media-tabletLg {
+          display: none;
+        }
       }
     }
   }

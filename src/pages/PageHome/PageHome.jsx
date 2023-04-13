@@ -1,5 +1,5 @@
 import css from "./PageHome.module.scss";
-import HomeHero from "../../components/HomeHero/HomeHero";
+import Hero from "../../components/Hero/Hero";
 import ImgText from "../../components/ImgText/ImgText";
 
 import img from "../../assets/images/homeImg1.jpeg";
@@ -9,14 +9,14 @@ import bgImg from "../../assets/images/homeBackgroundHero.jpeg";
 export default function PageHome() {
   return (
     <main className={css.root}>
-      <HomeHero
+      <Hero
         bgImg={bgImg}
         title="Authentic Italian Pizzeria"
-        description="Et praesent nulla urna consequat dui arcu cursus diam fringilla
+        desc="Et praesent nulla urna consequat dui arcu cursus diam fringilla
             libero risus, aliquam diam, aliquam ullamcorper urna pulvinar velit
             suspendisse aliquam lacus sollicitudin mauris."
-        firstButton="Book a Table"
-        secondButton="Order Online"
+        firstBtn="Book a Table"
+        secondBtn="Order Online"
       />
 
       <section className={css.features}>

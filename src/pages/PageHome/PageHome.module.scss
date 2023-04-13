@@ -3,6 +3,7 @@
 .root {
   background: $fifthColor;
   min-height: 100vh;
+  overflow-x: hidden;
 
   .features {
     position: relative;
