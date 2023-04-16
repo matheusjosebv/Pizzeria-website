@@ -36,16 +36,30 @@
       padding: 0 70px;
     }
 
+    .blackBackground {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 60% 8%;
+      border-bottom-right-radius: 60% 8%;
+
+      opacity: 0.6;
+      background-color: $black;
+    }
+
     .herobar {
       position: relative;
-
-      z-index: 1;
-      width: 100%;
-      padding: 25px 50px 40px;
+      z-index: 9;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      width: 100%;
+      padding: 25px 0px 40px;
 
       @include media-desktopMd {
         padding: 25px 70px 50px;
@@ -109,14 +123,15 @@
           border-radius: 5px;
           border: 1px solid $white;
 
+          font-size: 10px;
           font-weight: 600;
           line-height: 13px;
           letter-spacing: 2px;
-          font-size: 10px;
 
           cursor: pointer;
           background: transparent;
           transition: 0.2s color, 0.2s background;
+
           &:hover {
             background: $white;
             color: $black;
@@ -183,12 +198,16 @@
 
     .btns {
       z-index: 1;
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+
       width: 100%;
       margin: 30px 0 150px 0;
 
       @include media-tabletSm {
-        display: flex;
         gap: 30px;
+        flex-direction: row;
         justify-content: center;
       }
 
@@ -197,11 +216,9 @@
       }
 
       .btn {
-        display: block;
-
         width: 100%;
-        padding: 13px 23px;
         margin: 30px 0 0;
+        padding: 13px 23px;
         border-radius: 5px;
 
         font-weight: 600;
@@ -254,21 +271,6 @@
           height: 470px;
         }
       }
-    }
-
-    .blackBackground {
-      z-index: 0;
-      position: absolute;
-
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-bottom-left-radius: 60% 8%;
-      border-bottom-right-radius: 60% 8%;
-
-      opacity: 0.6;
-      background-color: $black;
     }
   }
 }

@@ -21,3 +21,28 @@
     @content;
   }
 }
+
+@mixin paddingSides {
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @include media-tabletSm {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include media-tabletLg {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include media-desktopSm {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  // @include media-desktopMd {
+  //   padding-left: 25px;
+  //   padding-right: 25px;
+  // }
+}

@@ -1,11 +1,20 @@
+import { useState } from "react";
 import css from "./Hero.module.scss";
 
-import CustomRoute from "../CustomRoute/CustomRoute";
-
 import { HiMenu } from "react-icons/hi";
+import { CgClose } from "react-icons/cg";
 import { FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
+import CustomRoute from "../CustomRoute/CustomRoute";
+import Sidebar from "../../containers/Sidebar/Sidebar";
+
 export default function Hero({ bgImg, title, desc, firstBtn, secondBtn }) {
+  const [sidebar, setSidebar] = useState(false);
+
+  const handleSidedar = () => {
+    setSidebar((prev) => !prev);
+  };
+
   return (
     <main className={css.root}>
       <div className={css.wrapper} style={{ backgroundImage: `url(${bgImg})` }}>
@@ -30,7 +39,11 @@ export default function Hero({ bgImg, title, desc, firstBtn, secondBtn }) {
           </div>
 
           <div className={css.right}>
-            <HiMenu className={css.mobileMenu} />
+            {sidebar ? (
+              <CgClose className={css.mobileMenu} onClick={handleSidedar} />
+            ) : (
+              <HiMenu className={css.mobileMenu} onClick={handleSidedar} />
+            )}
             <button className={css.downloadApp}>Download the App</button>
           </div>
         </div>
@@ -52,6 +65,8 @@ export default function Hero({ bgImg, title, desc, firstBtn, secondBtn }) {
           </div>
         )}
       </div>
+
+      <Sidebar open={sidebar} toggleMenu={handleSidedar} />
     </main>
   );
 }
