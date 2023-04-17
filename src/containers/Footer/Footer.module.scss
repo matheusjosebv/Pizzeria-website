@@ -1,4 +1,120 @@
 @import "../../styles/global.scss";
 
 .root {
+  text-align: center;
+
+  @include media-tabletSm {
+    text-align: left;
+  }
+
+  .wrapper {
+    padding: 50px 25px;
+
+    @include media-tabletSm {
+      padding: 50px 30px;
+    }
+
+    @include media-tabletLg {
+      padding: 75px 50px;
+    }
+
+    @include media-desktopSm {
+      padding: 100px 70px;
+    }
+
+    @include media-tabletSm {
+      display: grid;
+      grid-template-columns: 40% 40%;
+      column-gap: 20%;
+    }
+
+    @include media-desktopSm {
+      grid-template-columns: 29.5% 18.5% 18.5% 18.5%;
+      column-gap: 5%;
+    }
+
+    .heading {
+      padding: 0 0 50px;
+
+      .logo {
+        width: 124px;
+      }
+
+      .desc {
+        padding: 20px 0 0;
+
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.6em;
+        color: $forthColor;
+
+        @include media-tabletSm {
+          padding: 20px 30px 0 0;
+        }
+      }
+
+      .socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0 0;
+
+        @include media-tabletSm {
+          justify-content: flex-start;
+        }
+
+        @include media-desktopSm {
+          padding: 30px 0 0;
+        }
+
+        .icon {
+          width: 20px;
+          height: 20px;
+
+          color: $black;
+          transition: 0.2s transform, 0.2s color;
+
+          &:hover {
+            color: $firstColor;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .about,
+    .menu,
+    .location {
+      padding: 0 0 50px;
+
+      .title {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.6em;
+        padding: 0 0 15px;
+      }
+
+      .route {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.6em;
+        color: $forthColor;
+      }
+    }
+  }
+
+  .copyright {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include paddingSides;
+
+    border-top: 1px solid $sixthColor;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6em;
+    text-align: center;
+    color: $forthColor;
+  }
 }

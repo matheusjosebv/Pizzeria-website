@@ -1,0 +1,160 @@
+@import "../../styles/global.scss";
+
+.root {
+  @include media-tabletLg {
+    display: flex;
+  }
+
+  .background {
+    position: relative;
+
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include media-tabletLg {
+      height: auto;
+      width: 50%;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 10px;
+    }
+
+    .clearance {
+      position: absolute;
+      z-index: 2;
+
+      top: 20px;
+      left: 20px;
+      width: 65px;
+      height: 65px;
+
+      @include media-desktopMd {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .details {
+    z-index: 1;
+    position: relative;
+
+    padding: 25px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    color: $white;
+    background: $firstColor;
+
+    @include media-tabletLg {
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 10px;
+    }
+
+    @include media-desktopMd {
+      padding: 50px;
+    }
+
+    .type {
+      display: none;
+
+      @include media-tabletLg {
+        display: flex;
+
+        top: 0;
+        z-index: 0;
+        // width: 90%;
+        left: -75px;
+        height: 100%;
+        position: absolute;
+      }
+    }
+
+    .subTitle {
+      z-index: 1;
+      position: relative;
+
+      font-size: 14px;
+      color: $seventhColor;
+
+      font-weight: 400;
+      line-height: 1.25em;
+
+      @include media-tabletLg {
+        font-size: 15px;
+      }
+
+      @include media-desktopSm {
+        font-size: 16px;
+      }
+
+      @include media-desktopMd {
+        font-size: 22px;
+      }
+    }
+
+    .title {
+      z-index: 1;
+      position: relative;
+
+      padding: 20px 0 0;
+
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.25em;
+
+      @include media-tabletLg {
+        font-size: 40px;
+      }
+
+      @include media-desktopSm {
+        font-size: 42px;
+      }
+
+      @include media-desktopMd {
+        font-size: 60px;
+      }
+    }
+
+    .desc {
+      z-index: 1;
+      position: relative;
+
+      padding: 20px 0 0;
+
+      font-size: 15px;
+
+      @include media-tabletLg {
+        font-size: 16px;
+      }
+
+      @include media-desktopSm {
+        font-size: 17px;
+      }
+
+      @include media-desktopMd {
+        font-size: 20px;
+      }
+    }
+
+    .price {
+      z-index: 1;
+      position: relative;
+
+      padding: 20px 0 0;
+
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 1.25em;
+
+      @include media-desktopMd {
+        font-size: 80px;
+      }
+    }
+  }
+}

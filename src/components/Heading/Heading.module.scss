@@ -1,0 +1,66 @@
+@import "../../styles/global.scss";
+
+.root {
+  text-align: center;
+
+  .subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0 0 25px;
+    color: $firstColor;
+
+    @include media-tabletLg {
+      font-size: 24px;
+    }
+
+    @include media-desktopMd {
+      font-size: 26px;
+    }
+  }
+
+  .title {
+    padding: 0 0 25px;
+
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.4em;
+
+    @include media-tabletSm {
+      font-size: 48px;
+    }
+
+    @include media-tabletSm {
+      font-size: 64px;
+    }
+  }
+
+  .desc {
+    padding: 0 0 25px;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6em;
+    color: $forthColor;
+  }
+
+  .btn {
+    padding: 13px 23px;
+
+    border: 1px solid;
+    border-radius: 5px;
+
+    color: $firstColor;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 2px;
+
+    transition: 0.2s background, 0.2s color;
+
+    &:hover {
+      color: $white;
+      background: $firstColor;
+    }
+  }
+}

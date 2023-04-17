@@ -3,45 +3,65 @@
 .root {
   text-align: center;
 
-  .img {
-    width: 45vw;
-    height: 45vw;
-    max-width: 250px;
-    max-height: 250px;
+  &.clickable {
+    cursor: pointer;
 
-    border-radius: 50%;
-
-    @include media-tabletLg {
-      width: 23vw;
-      height: 23vw;
+    .link {
+      cursor: pointer;
     }
   }
 
-  .title {
-    font-size: 22px;
-    margin: 20px 0 0;
-    font-weight: 500;
-    line-height: 1.2em;
-    color: $firstColor;
+  .link {
+    cursor: default;
 
-    @include media-tabletSm {
-      font-size: 24px;
+    .img {
+      width: 45vw;
+      height: 45vw;
+      max-width: 250px;
+      max-height: 250px;
+
+      border-radius: 50%;
+
+      @include media-tabletLg {
+        width: 23vw;
+        height: 23vw;
+      }
     }
 
-    @include media-desktopSm {
-      font-size: 32px;
+    .imgAnim {
+      transition: 0.3s transform ease-in-out;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
     }
-  }
 
-  .description {
-    font-size: 15px;
-    margin: 20px 0 0;
-    color: $forthColor;
-    font-weight: 400;
-    line-height: 1.6em;
+    .title {
+      font-size: 22px;
+      margin: 20px 0 0;
+      font-weight: 500;
+      line-height: 1.2em;
+      color: $firstColor;
 
-    @include media-desktopSm {
-      font-size: 17px;
+      @include media-tabletSm {
+        font-size: 24px;
+      }
+
+      @include media-desktopSm {
+        font-size: 32px;
+      }
+    }
+
+    .desc {
+      font-size: 15px;
+      margin: 20px 0 0;
+      color: $forthColor;
+      font-weight: 400;
+      line-height: 1.6em;
+
+      @include media-desktopSm {
+        font-size: 17px;
+      }
     }
   }
 }

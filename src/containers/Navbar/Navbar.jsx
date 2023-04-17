@@ -5,8 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { HiMenu } from "react-icons/hi";
 import { CgClose } from "react-icons/cg";
-import { FaGooglePlay as GoogleIcon } from "react-icons/fa";
-import { GrAppleAppStore as AppleIcon } from "react-icons/gr";
+import { FaGooglePlay, FaAppStore } from "react-icons/fa";
 
 import Sidebar from "../Sidebar/Sidebar";
 import CustomRoute from "../../components/CustomRoute/CustomRoute";
@@ -94,21 +93,23 @@ export default function Navbar() {
             <CustomRoute to="/contact" name="contact" className={css.route} />
           </div>
 
-          <button className={css.downloadApp}>
-            <div className={css.icons}>
-              <div
-                ref={googleRef}
-                className={classNames(css.icon, css.googleIcon)}
-              >
-                <GoogleIcon />
+          <Link to="https://play.google.com">
+            <button className={css.downloadApp}>
+              <div className={css.icons}>
+                <div
+                  ref={googleRef}
+                  className={classNames(css.icon, css.googleIcon)}
+                >
+                  <FaGooglePlay />
+                </div>
+                <div ref={appleRef} className={css.icon}>
+                  <FaAppStore />
+                </div>
               </div>
-              <div ref={appleRef} className={css.icon}>
-                <AppleIcon />
-              </div>
-            </div>
 
-            <p>Download the App</p>
-          </button>
+              <p>Download the App</p>
+            </button>
+          </Link>
 
           {sidebar ? (
             <CgClose className={css.mobileMenu} onClick={handleSidedar} />

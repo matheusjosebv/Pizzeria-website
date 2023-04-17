@@ -7,8 +7,19 @@
 
   .features {
     position: relative;
-    @include paddingSides;
     padding: 100px 25px 50px;
+
+    @include media-tabletSm {
+      padding: 100px 30px 50px;
+    }
+
+    @include media-tabletLg {
+      padding: 100px 50px 75px;
+    }
+
+    @include media-desktopSm {
+      padding: 100px 70px;
+    }
 
     .pizzaContainer {
       z-index: 1;
@@ -44,13 +55,18 @@
       }
 
       .imgText {
+        padding: 50px 0 0;
+
         @include media-tabletLg {
           width: 33%;
+          padding: 0;
         }
       }
 
       .middleImgText {
-        padding: 65px 0 0;
+        @include media-tabletLg {
+          padding: 65px 0 0;
+        }
       }
     }
   }
@@ -128,6 +144,417 @@
             width: 33%;
           }
         }
+      }
+    }
+  }
+
+  .offers {
+    padding: 50px 25px;
+
+    @include media-tabletSm {
+      padding: 50px 30px;
+    }
+
+    @include media-tabletLg {
+      padding: 75px 50px;
+    }
+
+    @include media-desktopSm {
+      padding: 100px 70px;
+    }
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+
+      text-align: center;
+
+      @include media-tabletSm {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .title {
+        font-size: 48px;
+        padding: 0 0 25px;
+        font-weight: 400;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0 0 20px;
+        padding: 13px 23px;
+
+        border: 1px solid;
+        border-radius: 5px;
+
+        color: $firstColor;
+
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 13px;
+        letter-spacing: 2px;
+
+        transition: 0.2s background, 0.2s color;
+
+        &:hover {
+          color: $white;
+          background: $firstColor;
+        }
+      }
+    }
+
+    .offersWrapper {
+      padding: 25px 0 0;
+
+      @include media-tabletLg {
+        padding: 50px 0 0;
+      }
+
+      .smallOffers {
+        @include media-tabletLg {
+          display: flex;
+          gap: 50px;
+        }
+
+        .smallOffer {
+          margin: 25px 0 0;
+
+          @include media-tabletLg {
+            width: 50%;
+            margin: 50px 0 0;
+          }
+        }
+      }
+    }
+  }
+
+  .locations {
+    padding: 50px 25px;
+
+    @include media-tabletSm {
+      padding: 50px 30px;
+    }
+
+    @include media-tabletLg {
+      padding: 75px 50px;
+    }
+
+    @include media-desktopSm {
+      padding: 100px 70px;
+    }
+
+    .heading {
+      text-align: center;
+
+      .subtitle {
+        font-size: 22px;
+        font-weight: 500;
+        padding: 0 0 25px;
+        color: $firstColor;
+
+        @include media-tabletLg {
+          font-size: 24px;
+        }
+
+        @include media-desktopMd {
+          font-size: 26px;
+        }
+      }
+
+      .title {
+        padding: 0 0 25px;
+
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.4em;
+
+        @include media-tabletSm {
+          font-size: 48px;
+        }
+
+        @include media-tabletSm {
+          font-size: 64px;
+        }
+      }
+
+      .desc {
+        padding: 0 0 25px;
+
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.6em;
+        color: $forthColor;
+      }
+    }
+  }
+
+  .menu {
+    padding: 50px 25px;
+
+    @include media-tabletSm {
+      padding: 50px 30px;
+    }
+
+    @include media-tabletLg {
+      padding: 75px 50px;
+    }
+
+    @include media-desktopSm {
+      padding: 100px 70px;
+    }
+
+    .heading {
+      text-align: center;
+
+      .subtitle {
+        font-size: 22px;
+        font-weight: 500;
+        padding: 0 0 25px;
+        color: $firstColor;
+
+        @include media-tabletLg {
+          font-size: 24px;
+        }
+
+        @include media-desktopMd {
+          font-size: 26px;
+        }
+      }
+
+      .title {
+        padding: 0 0 25px;
+
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.4em;
+
+        @include media-tabletSm {
+          font-size: 48px;
+        }
+
+        @include media-tabletSm {
+          font-size: 64px;
+        }
+      }
+
+      .desc {
+        padding: 0 0 25px;
+
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.6em;
+        color: $forthColor;
+      }
+
+      .btn {
+        padding: 13px 23px;
+
+        border: 1px solid;
+        border-radius: 5px;
+
+        color: $firstColor;
+
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 13px;
+        letter-spacing: 2px;
+
+        transition: 0.2s background, 0.2s color;
+
+        &:hover {
+          color: $white;
+          background: $firstColor;
+        }
+      }
+    }
+
+    .highlights {
+      padding: 75px 0 0;
+
+      @include media-tabletLg {
+        display: flex;
+        gap: 50px;
+        padding: 0;
+      }
+
+      .meal {
+        padding: 0 0 50px;
+
+        @include media-tabletLg {
+          width: 33%;
+        }
+      }
+
+      .middleMeal {
+        @include media-tabletLg {
+          padding: 65px 0 0;
+        }
+      }
+    }
+  }
+
+  .places {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    column-gap: 20%;
+
+    text-align: center;
+
+    @include media-desktopMd {
+      grid-template-columns: 21.25% 21.25% 21.25% 21.25%;
+      column-gap: 5%;
+    }
+
+    .place {
+      padding: 50px 0 0;
+    }
+
+    .city {
+      padding: 0 0 20px;
+
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1.4em;
+
+      color: $firstColor;
+
+      @include media-tabletLg {
+        font-size: 40px;
+      }
+    }
+
+    .address,
+    .phone {
+      font-size: 16px;
+      line-height: 1.6em;
+      color: $forthColor;
+
+      @include media-tabletLg {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .franchise {
+    padding: 50px 25px;
+
+    @include media-tabletSm {
+      padding: 50px 30px;
+    }
+
+    @include media-tabletLg {
+      padding: 75px 50px;
+    }
+
+    @include media-desktopSm {
+      padding: 100px 70px;
+    }
+  }
+
+  .app {
+    padding: 50px 25px 0;
+
+    @include media-tabletSm {
+      padding: 50px 30px 0;
+    }
+
+    @include media-tabletLg {
+      display: flex;
+      align-items: flex-end;
+
+      gap: 30px;
+
+      padding: 75px 50px 0;
+    }
+
+    @include media-desktopSm {
+      padding: 100px 70px 0;
+    }
+
+    .details {
+      padding: 25px 0 0;
+
+      @include media-tabletLg {
+        width: 60%;
+      }
+
+      .heading {
+        .subTitle {
+          font-size: 24px;
+        }
+        .title {
+          font-size: 48px;
+        }
+        .desc {
+          font-size: 16px;
+        }
+      }
+
+      .btns {
+        display: flex;
+        flex-direction: column;
+
+        @include media-tabletLg {
+          flex-direction: row;
+          gap: 18px;
+        }
+
+        .btn {
+          position: relative;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          margin: 0 0 20px;
+          padding: 13px 18px;
+
+          border: 1px solid;
+          border-radius: 5px;
+
+          color: $firstColor;
+
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 13px;
+          letter-spacing: 2px;
+
+          transition: 0.2s background, 0.2s color;
+
+          &:hover {
+            color: $white;
+            background: $firstColor;
+          }
+
+          span {
+            @include media-tabletLg {
+              margin: 0 0 0 25px;
+            }
+          }
+
+          .icon {
+            position: absolute;
+            left: 18px;
+          }
+        }
+      }
+    }
+
+    .phoneContainer {
+      padding: 50px 0 0;
+
+      @include media-tabletLg {
+        width: 40%;
+        padding: 0;
+      }
+
+      .phone {
+        width: 100%;
       }
     }
   }

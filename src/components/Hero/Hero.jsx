@@ -7,6 +7,7 @@ import { FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 
 import CustomRoute from "../CustomRoute/CustomRoute";
 import Sidebar from "../../containers/Sidebar/Sidebar";
+import { Link } from "react-router-dom";
 
 export default function Hero({ bgImg, title, desc, firstBtn, secondBtn }) {
   const [sidebar, setSidebar] = useState(false);
@@ -22,19 +23,29 @@ export default function Hero({ bgImg, title, desc, firstBtn, secondBtn }) {
         <div className={css.herobar}>
           <div className={css.left}>
             <div className={css.socialMedia}>
-              <FaTwitter className={css.socialIcon} />
-              <FaFacebook className={css.socialIcon} />
-              <FaInstagram className={css.socialIcon} />
-              <FaYoutube className={css.socialIcon} />
+              <Link to="https://www.twitter.com">
+                <FaTwitter className={css.socialIcon} />
+              </Link>
+              <Link to="https://www.facebook.com">
+                <FaFacebook className={css.socialIcon} />
+              </Link>
+              <Link to="https://www.instagram.com">
+                <FaInstagram className={css.socialIcon} />
+              </Link>
+              <Link to="https://www.youtube.com">
+                <FaYoutube className={css.socialIcon} />
+              </Link>
             </div>
           </div>
 
           <div className={css.centre}>
             <div className={css.logo}>
-              <img
-                src="https://websitedemos.net/pizzeria-04/wp-content/uploads/sites/791/2021/03/pizzeria-template-site-logo.svg"
-                alt="The Pizzeria"
-              />
+              <Link to="/">
+                <img
+                  src="https://websitedemos.net/pizzeria-04/wp-content/uploads/sites/791/2021/03/pizzeria-template-site-logo.svg"
+                  alt="The Pizzeria"
+                />
+              </Link>
             </div>
           </div>
 
@@ -44,7 +55,9 @@ export default function Hero({ bgImg, title, desc, firstBtn, secondBtn }) {
             ) : (
               <HiMenu className={css.mobileMenu} onClick={handleSidedar} />
             )}
-            <button className={css.downloadApp}>Download the App</button>
+            <Link to="https://play.google.com">
+              <button className={css.downloadApp}>Download the App</button>
+            </Link>
           </div>
         </div>
 

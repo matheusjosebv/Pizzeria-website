@@ -1,12 +1,21 @@
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 import css from "./ImgText.module.scss";
 
-export default function ImgText({ className, img, title, description }) {
+export default function ImgText({ className, img, title, desc, imgAnim, to }) {
   return (
-    <main className={classNames(css.root, className)}>
-      <img className={css.img} src={img} alt={title} />
-      <h1 className={css.title}>{title}</h1>
-      <p className={css.description}>{description}</p>
+    <main className={classNames(css.root, { [css.clickable]: to }, className)}>
+      <Link to={to} className={css.link}>
+        {img && (
+          <img
+            className={classNames(css.img, { [css.imgAnim]: imgAnim })}
+            src={img}
+            alt={title}
+          />
+        )}
+        {title && <h1 className={css.title}>{title}</h1>}
+        {desc && <p className={css.desc}>{desc}</p>}
+      </Link>
     </main>
   );
 }
