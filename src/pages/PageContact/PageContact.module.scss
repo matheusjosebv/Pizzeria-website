@@ -1,4 +1,18 @@
 @import "../../styles/global.scss";
 
 .root {
+  overflow-x: hidden;
+  background: $fifthColor;
+
+  .location {
+    @include secPadding;
+  }
+
+  .franchise {
+    @include secPadding;
+  }
+
+  .app {
+    @include secPaddingBottom;
+  }
 }

@@ -1,23 +1,21 @@
 import css from "./Footer.module.scss";
+import { Link } from "react-router-dom";
 import { FaTwitter, FaInstagram, FaYoutube, FaFacebook } from "react-icons/fa";
-import classNames from "classnames";
 
 export default function Footer() {
   return (
     <footer className={css.root}>
       <div className={css.wrapper}>
-        <div className={classNames(css.heading, css.flexEl)}>
+        <div className={css.heading}>
           <img
             alt="The Pizzeria"
             className={css.logo}
             src="https://websitedemos.net/pizzeria-04/wp-content/uploads/sites/791/2021/03/pizzeria-template-site-logo-red.svg"
           />
-
           <p className={css.desc}>
             Vivamus convallis fermen sollicitudin et, vitae elit in vel ultrices
             sed in urna ipsum ullamcorper auctor.
           </p>
-
           <div className={css.socials}>
             <FaTwitter className={css.icon} />
             <FaFacebook className={css.icon} />
@@ -26,36 +24,57 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={classNames(css.about, css.flexEl)}>
+        <div className={css.about}>
           <h1 className={css.title}> About Us</h1>
-
           <div className={css.routes}>
-            <p className={css.route}>Our Story</p>
-            <p className={css.route}>Our Locations</p>
-            <p className={css.route}>Current Deals</p>
-            <p className={css.route}>Contact Us</p>
+            <Link to="/about">
+              <p className={css.route}>Our Story</p>
+            </Link>
+            <Link to="/contact">
+              <p className={css.route}>Our Locations</p>
+            </Link>
+            <Link to="/offers">
+              <p className={css.route}>Current Deals</p>
+            </Link>
+            <Link to="/contact">
+              <p className={css.route}>Contact Us</p>
+            </Link>
           </div>
         </div>
 
-        <div className={classNames(css.menu, css.flexEl)}>
+        <div className={css.menu}>
           <h1 className={css.title}> Our Menu</h1>
-
           <div className={css.routes}>
-            <p className={css.route}>Pizza</p>
-            <p className={css.route}>Pasta</p>
-            <p className={css.route}>Dessert</p>
-            <p className={css.route}>Take & Bake</p>
+            <Link to="/menu">
+              <p className={css.route}>Pizza</p>
+            </Link>
+            <Link to="/menu">
+              <p className={css.route}>Pasta</p>
+            </Link>
+            <Link to="/menu">
+              <p className={css.route}>Dessert</p>
+            </Link>
+            <Link to="/menu">
+              <p className={css.route}>Take & Bake</p>
+            </Link>
           </div>
         </div>
 
-        <div className={classNames(css.location, css.flexEl)}>
+        <div className={css.location}>
           <h1 className={css.title}> Our Location</h1>
-
           <div className={css.routes}>
-            <p className={css.route}>The Pizzeria Rome</p>
-            <p className={css.route}>The Pizzeria Madrid</p>
-            <p className={css.route}>The Pizzeria Paris</p>
-            <p className={css.route}>The Pizzeria Miami</p>
+            <Link to="/contact">
+              <p className={css.route}>The Pizzeria Rome</p>
+            </Link>
+            <Link to="/contact">
+              <p className={css.route}>The Pizzeria Madrid</p>
+            </Link>
+            <Link to="/contact">
+              <p className={css.route}>The Pizzeria Paris</p>
+            </Link>
+            <Link to="/contact">
+              <p className={css.route}>The Pizzeria Miami</p>
+            </Link>
           </div>
         </div>
       </div>

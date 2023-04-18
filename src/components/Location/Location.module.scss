@@ -1,0 +1,25 @@
+@import "../../styles/global.scss";
+
+.root {
+  text-align: center;
+
+  .city {
+    font-size: 32px;
+    padding: 0 0 20px;
+    color: $firstColor;
+
+    @include media-tabletLg {
+      font-size: 40px;
+    }
+  }
+
+  .address,
+  .phone {
+    font-size: 16px;
+    color: $forthColor;
+
+    @include media-tabletLg {
+      font-size: 17px;
+    }
+  }
+}

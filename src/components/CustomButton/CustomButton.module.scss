@@ -1,0 +1,61 @@
+@import "../../styles/global.scss";
+
+.root {
+  position: relative;
+  border: 1px solid;
+  padding: 13px 23px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: 0.2s background, 0.2s color, 0.2s border;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 2px;
+
+  .icon {
+    position: absolute;
+    left: 23px;
+  }
+}
+
+.red {
+  color: $white;
+  background: $firstColor;
+  border: 1px solid $firstColor;
+
+  &:hover {
+    background: $secondColor;
+    border: 1px solid $secondColor;
+  }
+}
+
+.outlineBlack {
+  color: $black;
+  border: 1px solid $black;
+
+  &:hover {
+    color: $white;
+    background: $black;
+  }
+}
+
+.outlineRed {
+  color: $firstColor;
+  border: 1px solid $firstColor;
+
+  &:hover {
+    color: $white;
+    background: $firstColor;
+  }
+}
+
+.outlineWhite {
+  color: $white;
+  border: 1px solid $white;
+
+  &:hover {
+    color: $black;
+    background: $white;
+  }
+}

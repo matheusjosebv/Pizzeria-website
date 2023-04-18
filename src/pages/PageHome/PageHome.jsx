@@ -4,8 +4,12 @@ import css from "./PageHome.module.scss";
 import Hero from "../../components/Hero/Hero";
 import Heading from "../../components/Heading/Heading";
 import ImgText from "../../components/ImgText/ImgText";
+import BigOffer from "../../components/BigOffer/BigOffer";
+import AppRating from "../../components/AppRating/AppRating";
+import SmallOffer from "../../components/SmallOffer/SmallOffer";
+import IconTextLink from "../../components/IconTextLink/IconTextLink";
+import DownloadTheApp from "../../components/DownloadTheApp/DownloadTheApp";
 
-import phoneImg from "../../assets/images/phone.png";
 import imgText1 from "../../assets/images/homeImg1.jpeg";
 import imgText2 from "../../assets/images/homeImg2.jpeg";
 import imgText3 from "../../assets/images/homeImg3.jpeg";
@@ -17,12 +21,20 @@ import bgOfferImg from "../../assets/images/pizzaOffer.jpeg";
 import smOfferImg1 from "../../assets/images/pizzaOffer2.jpeg";
 import smOfferImg2 from "../../assets/images/pizzaOffer3.jpeg";
 import bgImg from "../../assets/images/homeBackgroundHero.jpeg";
-import IconTextLink from "../../components/IconTextLink/IconTextLink";
+import bgSocials from "../../assets/images/pizzeria-social.jpeg";
 
 import { MdPhoneIphone } from "react-icons/md";
-import { FaBox, FaPizzaSlice, FaGooglePlay, FaAppStore } from "react-icons/fa";
-import BigOffer from "../../components/BigOffer/BigOffer";
-import SmallOffer from "../../components/SmallOffer/SmallOffer";
+import {
+  FaBox,
+  FaPizzaSlice,
+  FaGooglePlay,
+  FaAppStore,
+  FaInstagram,
+  FaUtensilSpoon,
+} from "react-icons/fa";
+import Location from "../../components/Location/Location";
+import OurLocation from "../../components/OurLocation/OurLocation";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 export default function PageHome() {
   return (
@@ -132,8 +144,13 @@ export default function PageHome() {
 
       <section className={css.offers}>
         <div className={css.heading}>
-          <h1 className={css.title}> Best Deals!</h1>
-          <button className={css.btn}>View All</button>
+          <h2 className={css.title}> Best Deals!</h2>
+          <CustomButton
+            outlineRed
+            to="/offers"
+            label="view all"
+            className={css.btn}
+          />
         </div>
 
         <div className={css.offersWrapper}>
@@ -173,84 +190,79 @@ export default function PageHome() {
       </section>
 
       <section className={css.locations}>
-        <Heading
-          subTitle="Our Location"
-          title="Find The Pizzeria near you"
-          desc="Cursus ultricies in maecenas pulvinar ultrices integer quam amet,
-          semper dictumst sit interdum ut venenatis pellentesque."
-        />
-
-        <div className={css.places}>
-          <div className={css.place}>
-            <h1 className={css.city}>Rome</h1>
-            <p className={css.address}>
-              Via di S. Vincenzo, 12/34A, 00123 Roma RM, Italy.
-            </p>
-            <p className={css.phone}>+39 123 456 7890</p>
-          </div>
-
-          <div className={css.place}>
-            <h1 className={css.city}>Florence</h1>
-            <p className={css.address}>
-              Viale Belfiore, 50, 50144 Firenze FI, Italy.
-            </p>
-            <p className={css.phone}>+39 123 456 7890</p>
-          </div>
-
-          <div className={css.place}>
-            <h1 className={css.city}>Bologna</h1>
-            <p className={css.address}>
-              Via delle Lame, 55, 40122 Bologna BO, Italy.
-            </p>
-            <p className={css.phone}>+39 123 456 7890</p>
-          </div>
-
-          <div className={css.place}>
-            <h1 className={css.city}>Venice</h1>
-            <p className={css.address}>
-              S. Marco, 615, 30124 Venezia VE, Italy.
-            </p>
-            <p className={css.phone}>+39 123 456 7890</p>
-          </div>
-        </div>
+        <OurLocation className={css.location} />
       </section>
 
       <section className={css.franchise}>
         <Heading
-          subtitle="Join The Table"
+          subTitle="Join The Table"
           title="Franchise Opportunities"
           desc="Fermentum non quis vitae viverra ipsum eget tincidunt consequat ac velit leo, rutrum tellus augue dolor leo massa augue rhoncus pellentesque pulvinar pellentesque potenti cras arcu praesent urna a, vitae mattis pellentesque rhoncus cursus enim ac eu justo."
           to="/contact"
           btn="Get in Touch"
+          flex
         />
       </section>
 
-      <section className={css.social}></section>
+      <section className={css.social}>
+        <div className={css.top}>
+          <div className={css.box}>
+            <div className={css.contentWrapper}>
+              <div className={css.content}>
+                <div className={css.icon}>
+                  <FaInstagram />
+                </div>
+
+                <div className={css.text}>
+                  <h2 className={css.title}>Follow @ThePizzeria</h2>
+                  <p className={css.desc}>
+                    Leo nulla cras augue eros, diam vivamus et lectus volutpat
+                    at facilisi tortor porta
+                  </p>
+                  <CustomButton
+                    outlineWhite
+                    className={css.btn}
+                    label="visit our instagram"
+                    to="https://www.instagram.com"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <img
+            className={css.background}
+            src={bgSocials}
+            alt="instagram images"
+          />
+        </div>
+
+        <div className={css.bottom}>
+          <div className={css.ratings}>
+            <AppRating
+              className={css.rating}
+              icon={<FaGooglePlay />}
+              rating="4.9"
+              numReviews="1234"
+            />
+            <AppRating
+              className={css.rating}
+              icon={<FaAppStore />}
+              rating="4.6"
+              numReviews="2345"
+            />
+            <AppRating
+              className={css.rating}
+              icon={<FaUtensilSpoon />}
+              rating="4.3"
+              numReviews="678"
+            />
+          </div>
+        </div>
+      </section>
 
       <section className={css.app}>
-        <div className={css.details}>
-          <div className={css.heading}>
-            <h1 className={css.subTitle}>Free Delivery!</h1>
-            <h1 className={css.title}>Download the App now!</h1>
-            <p className={css.desc}>
-              Malesuada dignissim non, aliquam id tincidunt amet in sed et
-              gravida pulvinar ipsum mauris etiam mattis nisl.
-            </p>
-          </div>
-
-          <div className={css.btns}>
-            <button className={css.btn}>
-              <FaGooglePlay className={css.icon} /> <span>Google Play </span>
-            </button>
-            <button className={css.btn}>
-              <FaAppStore className={css.icon} /> <span>App Store </span>
-            </button>
-          </div>
-        </div>
-
-        <div className={css.phoneContainer}>
-          <img className={css.phone} src={phoneImg} alt="phone" />
-        </div>
+        <DownloadTheApp className={css.downloadTheApp} />
       </section>
     </main>
   );

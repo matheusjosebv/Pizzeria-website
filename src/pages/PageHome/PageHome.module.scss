@@ -1,9 +1,8 @@
 @import "../../styles/global.scss";
 
 .root {
-  background: $fifthColor;
-  min-height: 100vh;
   overflow-x: hidden;
+  background: $fifthColor;
 
   .features {
     position: relative;
@@ -22,11 +21,11 @@
     }
 
     .pizzaContainer {
-      z-index: 1;
       position: absolute;
 
-      top: -100px;
       left: 50%;
+      z-index: 1;
+      top: -100px;
       transform: translateX(-50%);
 
       @include media-desktopSm {
@@ -73,13 +72,12 @@
 
   .services {
     position: relative;
-
     color: $white;
 
     background: url("../../assets/images/pizzeria-template-delivery-section-img-bg.jpeg");
-
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center center;
 
     .blackBackground {
@@ -89,7 +87,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-
       opacity: 0.7;
       background-color: $black;
     }
@@ -97,6 +94,7 @@
     .content {
       position: relative;
       text-align: center;
+
       padding: 50px 0;
       @include paddingSides;
 
@@ -107,8 +105,6 @@
 
       .title {
         font-size: 40px;
-        font-weight: 500;
-        line-height: 1.25em;
 
         @include media-tabletLg {
           font-size: 48px;
@@ -149,62 +145,29 @@
   }
 
   .offers {
-    padding: 50px 25px;
-
-    @include media-tabletSm {
-      padding: 50px 30px;
-    }
-
-    @include media-tabletLg {
-      padding: 75px 50px;
-    }
-
-    @include media-desktopSm {
-      padding: 100px 70px;
-    }
+    @include secPadding;
 
     .heading {
       display: flex;
+      text-align: center;
       flex-direction: column;
 
-      text-align: center;
-
       @include media-tabletSm {
-        flex-direction: row;
         align-items: center;
+        flex-direction: row;
         justify-content: space-between;
       }
 
       .title {
         font-size: 48px;
         padding: 0 0 25px;
-        font-weight: 400;
       }
 
       .btn {
         display: flex;
+        margin: 0 0 20px;
         align-items: center;
         justify-content: center;
-
-        margin: 0 0 20px;
-        padding: 13px 23px;
-
-        border: 1px solid;
-        border-radius: 5px;
-
-        color: $firstColor;
-
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 13px;
-        letter-spacing: 2px;
-
-        transition: 0.2s background, 0.2s color;
-
-        &:hover {
-          color: $white;
-          background: $firstColor;
-        }
       }
     }
 
@@ -234,144 +197,133 @@
   }
 
   .locations {
-    padding: 50px 25px;
+    @include secPadding;
+  }
 
-    @include media-tabletSm {
-      padding: 50px 30px;
-    }
+  .social {
+    .top {
+      position: relative;
+      margin: 0;
 
-    @include media-tabletLg {
-      padding: 75px 50px;
-    }
+      .background {
+        z-index: 0;
+        height: 50vw;
+      }
 
-    @include media-desktopSm {
-      padding: 100px 70px;
-    }
-
-    .heading {
-      text-align: center;
-
-      .subtitle {
-        font-size: 22px;
-        font-weight: 500;
-        padding: 0 0 25px;
-        color: $firstColor;
+      .box {
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        color: $white;
+        background-color: $firstColor;
 
         @include media-tabletLg {
-          font-size: 24px;
+          width: 50%;
+          height: 50%;
+          position: absolute;
         }
 
-        @include media-desktopMd {
-          font-size: 26px;
+        .contentWrapper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .content {
+            display: flex;
+            padding: 50px 25px;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+
+            @include media-tabletLg {
+              gap: 20px;
+              padding: 0;
+              max-width: 350px;
+              text-align: left;
+              flex-direction: row;
+              align-items: flex-start;
+            }
+
+            @include media-desktopSm {
+              max-width: 450px;
+            }
+
+            .icon {
+              > svg {
+                width: 50px;
+                height: 50px;
+
+                @include media-tabletLg {
+                  width: 35px;
+                  height: 35px;
+                }
+
+                @include media-desktopMd {
+                  width: 75px;
+                  height: 75px;
+                }
+              }
+            }
+
+            .text {
+              .title {
+                padding: 20px 0 0;
+
+                @include media-tabletLg {
+                  padding: 0;
+                }
+
+                @include media-desktopMd {
+                  font-size: 40px;
+                }
+              }
+
+              .desc {
+                padding: 15px 0 0;
+
+                @include media-desktopMd {
+                  padding: 20px 0 0;
+                }
+              }
+
+              .btn {
+                padding: 15px 0 0;
+
+                @include media-desktopMd {
+                  padding: 20px 0 0;
+                }
+              }
+            }
+          }
         }
       }
+    }
 
-      .title {
-        padding: 0 0 25px;
+    .bottom {
+      display: flex;
+      @include secPadding;
+      justify-content: center;
+      background-color: $firstColor;
 
-        font-size: 40px;
-        font-weight: 500;
-        line-height: 1.4em;
+      .ratings {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
 
-        @include media-tabletSm {
-          font-size: 48px;
+        @include media-tabletLg {
+          flex-direction: row;
+          gap: auto;
         }
-
-        @include media-tabletSm {
-          font-size: 64px;
-        }
-      }
-
-      .desc {
-        padding: 0 0 25px;
-
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 1.6em;
-        color: $forthColor;
       }
     }
   }
 
   .menu {
-    padding: 50px 25px;
-
-    @include media-tabletSm {
-      padding: 50px 30px;
-    }
-
-    @include media-tabletLg {
-      padding: 75px 50px;
-    }
-
-    @include media-desktopSm {
-      padding: 100px 70px;
-    }
-
-    .heading {
-      text-align: center;
-
-      .subtitle {
-        font-size: 22px;
-        font-weight: 500;
-        padding: 0 0 25px;
-        color: $firstColor;
-
-        @include media-tabletLg {
-          font-size: 24px;
-        }
-
-        @include media-desktopMd {
-          font-size: 26px;
-        }
-      }
-
-      .title {
-        padding: 0 0 25px;
-
-        font-size: 40px;
-        font-weight: 500;
-        line-height: 1.4em;
-
-        @include media-tabletSm {
-          font-size: 48px;
-        }
-
-        @include media-tabletSm {
-          font-size: 64px;
-        }
-      }
-
-      .desc {
-        padding: 0 0 25px;
-
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 1.6em;
-        color: $forthColor;
-      }
-
-      .btn {
-        padding: 13px 23px;
-
-        border: 1px solid;
-        border-radius: 5px;
-
-        color: $firstColor;
-
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 13px;
-        letter-spacing: 2px;
-
-        transition: 0.2s background, 0.2s color;
-
-        &:hover {
-          color: $white;
-          background: $firstColor;
-        }
-      }
-    }
+    @include secPadding;
 
     .highlights {
       padding: 75px 0 0;
@@ -398,164 +350,11 @@
     }
   }
 
-  .places {
-    display: grid;
-    grid-template-columns: 40% 40%;
-    column-gap: 20%;
-
-    text-align: center;
-
-    @include media-desktopMd {
-      grid-template-columns: 21.25% 21.25% 21.25% 21.25%;
-      column-gap: 5%;
-    }
-
-    .place {
-      padding: 50px 0 0;
-    }
-
-    .city {
-      padding: 0 0 20px;
-
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 1.4em;
-
-      color: $firstColor;
-
-      @include media-tabletLg {
-        font-size: 40px;
-      }
-    }
-
-    .address,
-    .phone {
-      font-size: 16px;
-      line-height: 1.6em;
-      color: $forthColor;
-
-      @include media-tabletLg {
-        font-size: 17px;
-      }
-    }
-  }
-
   .franchise {
-    padding: 50px 25px;
-
-    @include media-tabletSm {
-      padding: 50px 30px;
-    }
-
-    @include media-tabletLg {
-      padding: 75px 50px;
-    }
-
-    @include media-desktopSm {
-      padding: 100px 70px;
-    }
+    @include secPadding;
   }
 
   .app {
-    padding: 50px 25px 0;
-
-    @include media-tabletSm {
-      padding: 50px 30px 0;
-    }
-
-    @include media-tabletLg {
-      display: flex;
-      align-items: flex-end;
-
-      gap: 30px;
-
-      padding: 75px 50px 0;
-    }
-
-    @include media-desktopSm {
-      padding: 100px 70px 0;
-    }
-
-    .details {
-      padding: 25px 0 0;
-
-      @include media-tabletLg {
-        width: 60%;
-      }
-
-      .heading {
-        .subTitle {
-          font-size: 24px;
-        }
-        .title {
-          font-size: 48px;
-        }
-        .desc {
-          font-size: 16px;
-        }
-      }
-
-      .btns {
-        display: flex;
-        flex-direction: column;
-
-        @include media-tabletLg {
-          flex-direction: row;
-          gap: 18px;
-        }
-
-        .btn {
-          position: relative;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          margin: 0 0 20px;
-          padding: 13px 18px;
-
-          border: 1px solid;
-          border-radius: 5px;
-
-          color: $firstColor;
-
-          font-size: 14px;
-          font-weight: 600;
-          line-height: 13px;
-          letter-spacing: 2px;
-
-          transition: 0.2s background, 0.2s color;
-
-          &:hover {
-            color: $white;
-            background: $firstColor;
-          }
-
-          span {
-            @include media-tabletLg {
-              margin: 0 0 0 25px;
-            }
-          }
-
-          .icon {
-            position: absolute;
-            left: 18px;
-          }
-        }
-      }
-    }
-
-    .phoneContainer {
-      padding: 50px 0 0;
-
-      @include media-tabletLg {
-        width: 40%;
-        padding: 0;
-      }
-
-      .phone {
-        width: 100%;
-      }
-    }
+    @include secPaddingBottom;
   }
 }

@@ -1,0 +1,17 @@
+@import "../../styles/global.scss";
+
+.root {
+  .places {
+    display: grid;
+    column-gap: 20%;
+    grid-template-columns: 40% 40%;
+
+    padding: 50px 0 0;
+    text-align: center;
+
+    @include media-desktopMd {
+      column-gap: 5%;
+      grid-template-columns: 21.25% 21.25% 21.25% 21.25%;
+    }
+  }
+}
