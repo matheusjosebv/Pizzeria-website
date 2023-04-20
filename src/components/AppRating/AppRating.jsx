@@ -11,7 +11,7 @@ export default function AppRating({ className, icon, rating, numReviews }) {
       </div>
 
       <div className={css.details}>
-        <h1 className={css.rating}>{rating}</h1>
+        <h2 className={css.rating}>{rating}</h2>
         <div className={css.reviews}>
           <div className={css.stars}>
             <HiStar className={css.star} />

@@ -3,21 +3,25 @@ import { Link } from "react-router-dom";
 import css from "./CustomButton.module.scss";
 
 export default function CustomButton({
-  className,
   to,
   red,
-  outlineBlack,
-  outlineRed,
-  outlineWhite,
   icon,
   label,
+  submit,
+  className,
+  outlineRed,
+  outlineBlack,
+  outlineWhite,
 }) {
   return (
-    <div className={className}>
+    <div>
       <Link to={to}>
         <button
+          type={submit && "submit"}
           className={classNames(
             css.root,
+            className,
+            { [css.labelGap]: icon },
             { [css.red]: red },
             { [css.outlineBlack]: outlineBlack },
             { [css.outlineRed]: outlineRed },

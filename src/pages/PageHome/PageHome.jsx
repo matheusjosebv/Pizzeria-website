@@ -32,7 +32,6 @@ import {
   FaInstagram,
   FaUtensilSpoon,
 } from "react-icons/fa";
-import Location from "../../components/Location/Location";
 import OurLocation from "../../components/OurLocation/OurLocation";
 import CustomButton from "../../components/CustomButton/CustomButton";
 
@@ -79,7 +78,7 @@ export default function PageHome() {
       <section className={css.services}>
         <div className={css.blackBackground} />
         <div className={css.content}>
-          <h1 className={css.title}>Bringing Happiness To You</h1>
+          <h2 className={css.title}>Bringing Happiness To You</h2>
           <p className={css.desc}>
             Tellus id nisl quis at sollicitudin nisl nisi tincidunt purus .
           </p>
@@ -214,7 +213,7 @@ export default function PageHome() {
                 </div>
 
                 <div className={css.text}>
-                  <h2 className={css.title}>Follow @ThePizzeria</h2>
+                  <h4 className={css.title}>Follow @ThePizzeria</h4>
                   <p className={css.desc}>
                     Leo nulla cras augue eros, diam vivamus et lectus volutpat
                     at facilisi tortor porta

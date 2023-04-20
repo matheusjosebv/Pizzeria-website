@@ -3,16 +3,16 @@ import CustomClearance from "../CustomClearance/CustomClearance";
 import css from "./SmallOffer.module.scss";
 
 export default function SmallOffer({
-  className,
-  bgImg,
-  number,
-  yellow,
   red,
+  desc,
+  bgImg,
+  price,
   type1,
   type2,
   title,
-  desc,
-  price,
+  number,
+  yellow,
+  className,
 }) {
   return (
     <div className={classNames(css.root, className)}>

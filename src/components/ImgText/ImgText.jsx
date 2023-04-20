@@ -13,7 +13,7 @@ export default function ImgText({ className, img, title, desc, imgAnim, to }) {
             alt={title}
           />
         )}
-        {title && <h1 className={css.title}>{title}</h1>}
+        {title && <h4 className={css.title}>{title}</h4>}
         {desc && <p className={css.desc}>{desc}</p>}
       </Link>
     </main>

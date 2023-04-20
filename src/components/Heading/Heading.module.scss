@@ -4,64 +4,22 @@
   text-align: center;
 
   .subtitle {
-    font-size: 18px;
-    font-weight: 400;
     padding: 0 0 15px;
     color: $firstColor;
-    letter-spacing: 2px;
-
-    @include media-tabletLg {
-      font-size: 20px;
-    }
-
-    @include media-desktopMd {
-      font-size: 24px;
-    }
   }
 
   .title {
-    font-size: 40px;
     padding: 0 0 25px;
-
-    @include media-tabletLg {
-      font-size: 48px;
-    }
-
-    @include media-desktopSm {
-      font-size: 64px;
-    }
+    color: $thirdColor;
   }
 
   .desc {
-    font-size: 15px;
     padding: 0 0 25px;
     color: $forthColor;
-
-    @include media-tabletLg {
-      font-size: 16px;
-    }
-
-    @include media-desktopSm {
-      font-size: 17px;
-    }
   }
 
   .btn {
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 13px 23px;
-    color: $firstColor;
-    transition: 0.2s background, 0.2s color;
-
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 13px;
-    letter-spacing: 2px;
-
-    &:hover {
-      color: $white;
-      background: $firstColor;
-    }
+    width: auto;
   }
 }
 

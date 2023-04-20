@@ -162,17 +162,12 @@
 
     .title {
       z-index: 1;
-      font-size: 56px;
-      font-weight: 500;
-      line-height: 1.4em;
 
       @include media-tabletSm {
-        font-size: 72px;
         margin: 80px 0 0;
       }
 
       @include media-desktopSm {
-        font-size: 96px;
         margin: 100px 0 0;
       }
     }
@@ -180,16 +175,6 @@
     .desc {
       z-index: 1;
       margin: 20px 0 0;
-      font-size: 15px;
-      line-height: 1.6em;
-
-      @include media-tabletSm {
-        font-size: 16px;
-      }
-
-      @include media-desktopSm {
-        font-size: 17px;
-      }
 
       @include media-desktopMd {
         width: 500px;
@@ -198,12 +183,11 @@
 
     .btns {
       z-index: 1;
+      width: 100%;
       display: flex;
+      margin: 30px 0 150px 0;
       box-sizing: border-box;
       flex-direction: column;
-
-      width: 100%;
-      margin: 30px 0 150px 0;
 
       @include media-tabletSm {
         gap: 30px;
@@ -218,45 +202,17 @@
       .btn {
         width: 100%;
         margin: 30px 0 0;
-        padding: 13px 23px;
-        border-radius: 5px;
-
-        font-weight: 600;
-        line-height: 13px;
-        letter-spacing: 2px;
-
-        font-size: 14px;
 
         @include media-tabletSm {
           width: auto;
-        }
-
-        &:first-child {
-          background: $firstColor;
-          transition: 0.2s background;
-
-          &:hover {
-            background: $secondColor;
-          }
-        }
-
-        &:last-child {
-          transition: 0.2s color, 0.2s background;
-          border: 1px solid $white;
-
-          &:hover {
-            background: $white;
-            color: $black;
-          }
         }
       }
     }
 
     .pizzaContainer {
       z-index: 1;
-      position: absolute;
-
       bottom: -100px;
+      position: absolute;
 
       @include media-desktopSm {
         bottom: -235px;
@@ -271,6 +227,10 @@
           height: 470px;
         }
       }
+    }
+
+    .gap {
+      margin-bottom: 150px;
     }
   }
 }

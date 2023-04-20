@@ -1,15 +1,16 @@
 import { gsap } from "gsap";
 import classNames from "classnames";
 import css from "./Navbar.module.scss";
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
 import { HiMenu } from "react-icons/hi";
 import { CgClose } from "react-icons/cg";
-import { FaGooglePlay, FaAppStore } from "react-icons/fa";
-
 import Sidebar from "../Sidebar/Sidebar";
 import CustomRoute from "../../components/CustomRoute/CustomRoute";
-import { Link } from "react-router-dom";
+import CustomButton from "../../components/CustomButton/CustomButton";
+import useLayout from "../../hooks/useLayout";
+import { FaGooglePlay } from "react-icons/fa";
 
 export default function Navbar() {
   const rootRef = useRef();
@@ -17,6 +18,8 @@ export default function Navbar() {
   const googleRef = useRef();
   const [navbar, setNavbar] = useState(false);
   const [sidebar, setSidebar] = useState(false);
+
+  const layout = useLayout();
 
   const handleSidedar = () => {
     setSidebar((prev) => !prev);
@@ -93,23 +96,12 @@ export default function Navbar() {
             <CustomRoute to="/contact" name="contact" className={css.route} />
           </div>
 
-          <Link to="https://play.google.com">
-            <button className={css.downloadApp}>
-              <div className={css.icons}>
-                <div
-                  ref={googleRef}
-                  className={classNames(css.icon, css.googleIcon)}
-                >
-                  <FaGooglePlay />
-                </div>
-                <div ref={appleRef} className={css.icon}>
-                  <FaAppStore />
-                </div>
-              </div>
-
-              <p>Download the App</p>
-            </button>
-          </Link>
+          <CustomButton
+            className={css.btn}
+            to="https://play.google.com"
+            outlineWhite
+            label={layout.tabletLg ? "app" : "download the app"}
+          />
 
           {sidebar ? (
             <CgClose className={css.mobileMenu} onClick={handleSidedar} />

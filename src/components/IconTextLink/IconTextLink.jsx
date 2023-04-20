@@ -8,7 +8,7 @@ export default function IconTextLink({ className, icon, title, link }) {
       <div className={css.imgWrapper}>
         <div className={css.img}>{icon}</div>
       </div>
-      <h1 className={css.title}>{title}</h1>
+      <h4 className={css.title}>{title}</h4>
       <div className={css.link}>
         <p className={css.linkName}>{link}</p>
         <TbArrowNarrowRight className={css.arrow} />

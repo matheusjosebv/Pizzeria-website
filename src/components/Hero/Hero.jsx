@@ -8,8 +8,9 @@ import { FaTwitter, FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 import CustomRoute from "../CustomRoute/CustomRoute";
 import Sidebar from "../../containers/Sidebar/Sidebar";
 import { Link } from "react-router-dom";
+import CustomButton from "../CustomButton/CustomButton";
 
-export default function Hero({ bgImg, title, desc, firstBtn, secondBtn }) {
+export default function Hero({ gap, bgImg, title, desc, firstBtn, secondBtn }) {
   const [sidebar, setSidebar] = useState(false);
 
   const handleSidedar = () => {
@@ -70,13 +71,26 @@ export default function Hero({ bgImg, title, desc, firstBtn, secondBtn }) {
         </div>
 
         {title && <h1 className={css.title}>{title}</h1>}
+
         {desc && <p className={css.desc}>{desc}</p>}
+
         {(firstBtn || secondBtn) && (
           <div className={css.btns}>
-            {firstBtn && <button className={css.btn}>{firstBtn}</button>}
-            {secondBtn && <button className={css.btn}>{secondBtn}</button>}
+            {firstBtn && (
+              <CustomButton className={css.btn} label={firstBtn} red />
+            )}
+
+            {secondBtn && (
+              <CustomButton
+                className={css.btn}
+                label={secondBtn}
+                outlineWhite
+              />
+            )}
           </div>
         )}
+
+        {gap && <div className={css.gap} />}
       </div>
 
       <Sidebar open={sidebar} toggleMenu={handleSidedar} />

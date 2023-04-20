@@ -37,31 +37,13 @@
     }
 
     .title {
-      font-size: 22px;
       margin: 20px 0 0;
-      font-weight: 500;
-      line-height: 1.2em;
       color: $firstColor;
-
-      @include media-tabletSm {
-        font-size: 24px;
-      }
-
-      @include media-desktopSm {
-        font-size: 32px;
-      }
     }
 
     .desc {
-      font-size: 15px;
       margin: 20px 0 0;
       color: $forthColor;
-      font-weight: 400;
-      line-height: 1.6em;
-
-      @include media-desktopSm {
-        font-size: 17px;
-      }
     }
   }
 }

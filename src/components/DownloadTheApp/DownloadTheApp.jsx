@@ -2,14 +2,15 @@ import classNames from "classnames";
 import { FaGooglePlay, FaAppStore } from "react-icons/fa";
 import css from "./DownloadTheApp.module.scss";
 import phoneImg from "../../assets/images/phone.png";
+import CustomButton from "../CustomButton/CustomButton";
 
 export default function DownloadTheApp({ className }) {
   return (
     <div className={classNames(css.root, className)}>
       <div className={css.details}>
         <div className={css.heading}>
-          <h1 className={css.subTitle}>Free Delivery!</h1>
-          <h1 className={css.title}>Download the App now!</h1>
+          <h4 className={css.subTitle}>Free Delivery!</h4>
+          <h2 className={css.title}>Download the App now!</h2>
           <p className={css.desc}>
             Malesuada dignissim non, aliquam id tincidunt amet in sed et gravida
             pulvinar ipsum mauris etiam mattis nisl.
@@ -17,12 +18,21 @@ export default function DownloadTheApp({ className }) {
         </div>
 
         <div className={css.btns}>
-          <button className={css.btn}>
-            <FaGooglePlay className={css.icon} /> <span>Google Play </span>
-          </button>
-          <button className={css.btn}>
-            <FaAppStore className={css.icon} /> <span>App Store </span>
-          </button>
+          <CustomButton
+            label="google play"
+            className={css.btn}
+            icon={<FaGooglePlay />}
+            to="https://google.playstore.com"
+            outlineRed
+          />
+
+          <CustomButton
+            label="app store"
+            className={css.btn}
+            icon={<FaAppStore />}
+            to="https://appstore.com"
+            outlineRed
+          />
         </div>
       </div>
 

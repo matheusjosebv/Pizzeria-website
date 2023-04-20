@@ -4,6 +4,196 @@
   overflow-x: hidden;
   background: $fifthColor;
 
+  .infos {
+    position: relative;
+
+    .container {
+      margin: -75px 0 0;
+
+      @include media-tabletLg {
+        display: flex;
+        padding: 0 50px;
+      }
+
+      .left {
+        color: $thirdColor;
+        padding: 50px 30px;
+        background: $fifthColor;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: rgba(99, 99, 99, 0.05) -6px 2px 6px 0px;
+
+        @include media-tabletLg {
+          width: 40%;
+        }
+
+        .propertyInfo {
+          .title {
+          }
+
+          .iconInfo {
+            display: flex;
+            align-items: center;
+            padding: 15px 0 0;
+
+            .icon {
+              padding: 0 20px 0 0;
+              color: $firstColor;
+            }
+
+            .info {
+            }
+          }
+        }
+
+        .ownerInfo {
+          padding: 50px 0 0;
+
+          .title {
+          }
+
+          .name {
+            padding: 25px 0 0;
+          }
+
+          .iconInfo {
+            display: flex;
+            align-items: center;
+            padding: 15px 0 0;
+
+            .icon {
+              padding: 0 20px 0 0;
+              color: $firstColor;
+            }
+
+            .info {
+            }
+          }
+        }
+
+        .socialMedia {
+          padding: 50px 0 0;
+
+          .title {
+          }
+
+          .socials {
+            gap: 25px;
+            display: flex;
+            padding: 20px 0 0;
+            align-items: center;
+
+            .socialIcon {
+              width: 20px;
+              height: 20px;
+              color: $firstColor;
+              transition: 0.3s transform, 0.3s color;
+
+              &:hover {
+                transform: scale(1.1);
+                color: $secondColor;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        background: $white;
+        color: $forthColor;
+        padding: 50px 30px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: rgba(99, 99, 99, 0.05) 6px 2px 6px 0px;
+
+        @include media-tabletLg {
+          width: 60%;
+        }
+
+        .heading {
+          .title {
+            color: $thirdColor;
+          }
+
+          .desc {
+            padding: 20px 0 50px;
+          }
+        }
+
+        .form {
+          font-family: "Source Sans Pro";
+
+          input,
+          textarea {
+            resize: none;
+            display: block;
+            max-height: 250px;
+            padding: 15px 10px;
+            border-radius: 2px;
+            width: calc(100% - 20px);
+            max-width: calc(100% - 20px);
+            min-width: calc(100% - 20px);
+            background: rgba($light-gray, 0.35);
+            border: 1px solid rgba($forthColor, 0.2);
+
+            &::placeholder {
+              opacity: 0.5;
+            }
+          }
+
+          .fullNameInputs {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+
+            .first,
+            .last {
+              width: 50%;
+              padding: 15px 10px;
+              margin: 5px 0 20px;
+              max-width: unset;
+              min-width: unset;
+            }
+          }
+
+          .name,
+          .email,
+          .phone,
+          .subject,
+          .message {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.6em;
+
+            @include media-tabletSm {
+              font-size: 16px;
+            }
+
+            @include media-desktopSm {
+              font-size: 17px;
+            }
+
+            span {
+              color: $firstColor;
+            }
+          }
+
+          .emailInput,
+          .phoneInput,
+          .subjectInput,
+          .messageInput {
+            margin: 2px 0 20px;
+          }
+        }
+
+        .submitBtn {
+          margin: 15px 0 0;
+          width: auto;
+        }
+      }
+    }
+  }
+
   .location {
     @include secPadding;
   }
