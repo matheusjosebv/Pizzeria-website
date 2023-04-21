@@ -161,8 +161,8 @@
 
       .smallOffers {
         @include media-tabletLg {
-          display: flex;
           gap: 50px;
+          display: flex;
         }
 
         .smallOffer {

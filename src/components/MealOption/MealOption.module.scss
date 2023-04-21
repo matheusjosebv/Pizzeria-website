@@ -1,0 +1,61 @@
+@import "../../styles/global.scss";
+
+.root {
+  width: 100%;
+
+  @include media-tabletSm {
+    display: flex;
+    align-items: center;
+  }
+
+  @include media-tabletSm {
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .left {
+    .img {
+      width: 90%;
+      max-width: 300px;
+      background: $white;
+      border-radius: 10px;
+
+      @include media-tabletSm {
+        width: 150px;
+      }
+
+      @include media-tabletLg {
+        width: 175px;
+      }
+
+      @include media-desktopMd {
+        width: 200px;
+      }
+    }
+  }
+
+  .right {
+    .title {
+      margin: 10px 0 0;
+      color: $thirdColor;
+      text-transform: uppercase;
+
+      @include media-tabletSm {
+        margin: 0;
+      }
+
+      @include media-desktopSm {
+        font-size: 26px;
+      }
+    }
+
+    .desc {
+      margin: 7px 10% 0;
+      color: $forthColor;
+
+      @include media-tabletSm {
+        margin: 7px 0 0;
+      }
+    }
+  }
+}

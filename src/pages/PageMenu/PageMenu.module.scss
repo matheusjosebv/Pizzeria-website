@@ -3,4 +3,350 @@
 .root {
   overflow-x: hidden;
   background: $fifthColor;
+
+  .highlights {
+    position: relative;
+    @include secPadding;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: -100px;
+
+    @include media-tabletLg {
+      margin-top: -150px;
+    }
+
+    @include media-desktopSm {
+      margin-top: -175px;
+    }
+
+    .meal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .img {
+        width: 75%;
+        transition: 0.4s transform;
+
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+
+      .title {
+        color: $firstColor;
+        padding: 10px 0 0;
+      }
+    }
+
+    .middle {
+      margin: 20px 0 0;
+    }
+  }
+
+  .menuOptions {
+    @include secPadding;
+
+    .heading {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: 2px solid $light-gray;
+      padding: 0 0 50px;
+
+      @include media-desktopSm {
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .title {
+        color: $firstColor;
+      }
+
+      .desc {
+        margin: 20px 0 0;
+
+        @include media-desktopSm {
+          margin: 0;
+          width: 50%;
+        }
+      }
+    }
+
+    .mealCol {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+
+      @include media-tabletSm {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      @include media-desktopSm {
+        margin: 70px 0 0;
+        gap: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      @include media-desktopSm {
+        gap: 50px;
+      }
+
+      .meal {
+        margin: 70px 0 0;
+
+        @include media-desktopSm {
+          margin: 0;
+          flex: 50%;
+        }
+      }
+    }
+
+    .bigOffer {
+      margin: 100px 0;
+    }
+  }
+
+  .createOptions {
+    @include secPadding;
+
+    .heading {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: 2px solid $light-gray;
+      padding: 0 0 50px;
+
+      @include media-desktopSm {
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .title {
+        color: $firstColor;
+      }
+
+      .desc {
+        margin: 20px 0 0;
+
+        @include media-desktopSm {
+          margin: 0;
+          width: 40%;
+        }
+      }
+    }
+
+    .createArea {
+      .wrapper {
+        @include media-desktopSm {
+          display: flex;
+          gap: 75px;
+        }
+
+        @include media-desktopMd {
+          gap: 100px;
+        }
+
+        .left {
+          @include media-desktopSm {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .step {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+
+            padding: 50px 0;
+            border-bottom: 2px solid $light-gray;
+
+            @include media-tabletSm {
+              text-align: left;
+              align-items: flex-start;
+            }
+
+            @include media-desktopSm {
+              padding: 75px 0;
+            }
+
+            .subTitle {
+              margin: 15px 0 0;
+              color: $firstColor;
+            }
+
+            .title {
+              margin: 15px 0 0;
+            }
+
+            .option {
+              margin: 15px 0 0;
+            }
+          }
+        }
+
+        .right {
+          .step {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+
+            padding: 50px 0;
+            border-bottom: 2px solid $light-gray;
+
+            @include media-tabletSm {
+              text-align: left;
+              align-items: flex-start;
+            }
+
+            @include media-desktopSm {
+              border-bottom: unset;
+              border-left: 2px solid $light-gray;
+              padding: 0 0 0 75px;
+              margin: 75px 0 0;
+            }
+
+            @include media-desktopMd {
+              padding: 0 0 0 100px;
+            }
+
+            .subTitle {
+              margin: 15px 0 0;
+              color: $firstColor;
+            }
+
+            .title {
+              margin: 15px 0 0;
+              white-space: nowrap;
+            }
+
+            .option {
+              margin: 15px 0 0;
+            }
+          }
+
+          .listTitle {
+            margin: 50px 0 0;
+          }
+
+          .toppingListWrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .toppingList {
+              margin: 20px 0 0;
+              width: 100%;
+
+              @include media-desktopSm {
+                display: flex;
+                flex-wrap: wrap;
+              }
+
+              .topping {
+                margin: 15px auto 0;
+                font-weight: 400;
+                color: $forthColor;
+                font-family: "Source Sans Pro";
+                // width: 100%;
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                @include media-desktopSm {
+                  width: 50%;
+                }
+
+                &::before {
+                  top: 10px;
+                  left: -25px;
+                  content: "";
+                  margin: 0 10px 0 0;
+                  display: inline-block;
+                  height: 16px;
+                  width: 16px;
+                  border: 1px solid;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dessertOptions {
+    @include secPadding;
+
+    .heading {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: 2px solid $light-gray;
+      padding: 0 0 50px;
+
+      @include media-desktopSm {
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .title {
+        color: $firstColor;
+      }
+
+      .desc {
+        margin: 20px 0 0;
+
+        @include media-desktopSm {
+          margin: 0;
+          width: 50%;
+        }
+      }
+    }
+
+    .mealCol {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+
+      @include media-tabletSm {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      @include media-desktopSm {
+        margin: 70px 0 0;
+        gap: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      @include media-desktopSm {
+        gap: 50px;
+      }
+
+      .meal {
+        margin: 70px 0 0;
+
+        @include media-desktopSm {
+          margin: 0;
+          flex: 50%;
+        }
+      }
+    }
+  }
 }
