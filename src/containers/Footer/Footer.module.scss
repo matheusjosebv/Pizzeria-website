@@ -36,6 +36,10 @@
     .heading {
       padding: 0 0 50px;
 
+      @include media-desktopSm {
+        padding: 0;
+      }
+
       .logo {
         width: 124px;
       }
@@ -78,11 +82,31 @@
       }
     }
 
+    .about {
+      padding: 0 0 50px;
+
+      @include media-tabletLg {
+        padding: 0;
+      }
+    }
+
+    .menu {
+      padding: 0 0 50px;
+
+      @include media-tabletSm {
+        padding: 0;
+      }
+    }
+
+    .location {
+      @include media-tabletSm {
+        padding: 0;
+      }
+    }
+
     .about,
     .menu,
     .location {
-      padding: 0 0 50px;
-
       .title {
         font-size: 24px;
         font-weight: 400;

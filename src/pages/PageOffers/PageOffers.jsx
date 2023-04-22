@@ -8,8 +8,12 @@ import DownloadTheApp from "../../components/DownloadTheApp/DownloadTheApp";
 
 import svg from "../../assets/images/svg2.svg";
 import bgImg from "../../assets/images/offersHero.jpeg";
-import bgOfferImg from "../../assets/images/pizzaOffer.jpeg";
-import smOfferImg from "../../assets/images/pizzaOffer2.jpeg";
+import offerImg1 from "../../assets/images/offer1.jpeg";
+import offerImg2 from "../../assets/images/offer2.jpeg";
+import offerImg3 from "../../assets/images/offer3.jpeg";
+import offerImg4 from "../../assets/images/offer4.jpeg";
+import bgOfferImg1 from "../../assets/images/bgOffer1.jpeg";
+import bgOfferImg2 from "../../assets/images/bgOffer2.jpeg";
 import CustomButton from "../../components/CustomButton/CustomButton";
 
 export default function PageOffers() {
@@ -23,73 +27,73 @@ export default function PageOffers() {
       />
 
       <section className={css.offers}>
-        <h2 className={css.title}>Best Deals!</h2>
+        <h2 className={css.heading}>Best Deals!</h2>
         <BigOffer
-          className={css.bigOffer}
-          bgImg={bgOfferImg}
-          number="15"
           red
+          price="18"
+          number="15"
+          bgImg={bgOfferImg1}
           subTitle="Daily Deal!"
           title="Big Meat Monsta"
+          className={css.bigOffer}
           desc="Cursus ultricies in maecenas pulvinar ultrices integer quam amet"
-          price="18"
         />
 
         <div className={css.smallOffers}>
           <SmallOffer
-            className={css.smallOffer}
-            bgImg={smOfferImg}
-            number="40"
-            yellow
-            title="Combo Double Box"
-            price="24"
+            red
             type1
+            price="24"
+            number="10"
+            bgImg={offerImg1}
+            title="Combo Double Box"
+            className={css.smallOffer}
           />
 
           <SmallOffer
-            className={css.smallOffer}
-            bgImg={smOfferImg}
-            number="40"
-            yellow
-            title="Combo Double Box"
-            price="27"
-            desc="Starting at"
             type2
+            yellow
+            price="40"
+            number="25"
+            bgImg={offerImg2}
+            desc="Starting at"
+            title="2-in-1 Combo Deal"
+            className={css.smallOffer}
           />
         </div>
 
         <div className={css.smallOffers}>
           <SmallOffer
-            className={css.smallOffer}
-            bgImg={smOfferImg}
-            number="40"
+            type3
             yellow
-            title="Combo Double Box"
             price="32"
-            type1
+            number="30"
+            bgImg={offerImg3}
+            title="Combo Double Box"
+            className={css.smallOffer}
           />
 
           <SmallOffer
-            className={css.smallOffer}
-            bgImg={smOfferImg}
-            number="40"
-            yellow
-            title="Combo Double Box"
+            red
+            type1
             price="18"
+            number="15"
+            bgImg={offerImg4}
             desc="Starting at"
-            type2
+            title="Combo Double Box"
+            className={css.smallOffer}
           />
         </div>
 
         <BigOffer
-          className={css.bigOffer}
-          bgImg={bgOfferImg}
-          number="15"
           red
+          price="22"
+          number="15"
+          bgImg={bgOfferImg2}
           subTitle="Daily Deal!"
-          title="Big Meat Monsta"
+          title="Special Pepperoni"
           desc="Cursus ultricies in maecenas pulvinar ultrices integer quam amet"
-          price="18"
+          className={css.bigOffer}
         />
 
         <div className={css.hostParty}>

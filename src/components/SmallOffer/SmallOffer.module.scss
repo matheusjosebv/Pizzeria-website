@@ -37,7 +37,8 @@
     color: $white;
 
     .type1,
-    .type2 {
+    .type2,
+    .type3 {
       right: 0;
       z-index: -1;
       position: absolute;
@@ -46,6 +47,11 @@
       height: 100%;
       border-top-right-radius: 25px;
       border-bottom-right-radius: 25px;
+    }
+
+    .type3 {
+      height: 120%;
+      width: 270px;
     }
 
     .text {

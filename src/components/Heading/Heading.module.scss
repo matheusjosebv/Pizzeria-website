@@ -28,6 +28,7 @@
 
   @include media-tabletLg {
     display: flex;
+    align-items: flex-end;
     gap: 100px;
   }
 }

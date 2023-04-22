@@ -9,6 +9,7 @@ export default function SmallOffer({
   price,
   type1,
   type2,
+  type3,
   title,
   number,
   yellow,
@@ -38,6 +39,12 @@ export default function SmallOffer({
           <img
             className={css.type2}
             src="https://websitedemos.net/pizzeria-04/wp-content/uploads/sites/791/2021/03/pizzeria-template-shape-bg-3.svg"
+          />
+        )}
+        {type3 && (
+          <img
+            className={css.type3}
+            src="https://websitedemos.net/pizzeria-04/wp-content/uploads/sites/791/2021/03/pizzeria-template-shape-bg-4.svg"
           />
         )}
 

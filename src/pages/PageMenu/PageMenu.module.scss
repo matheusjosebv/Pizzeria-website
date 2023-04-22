@@ -259,7 +259,6 @@
                 font-weight: 400;
                 color: $forthColor;
                 font-family: "Source Sans Pro";
-                // width: 100%;
                 display: flex;
                 align-items: center;
                 text-align: center;
@@ -348,5 +347,13 @@
         }
       }
     }
+  }
+
+  .location {
+    @include secPadding;
+  }
+
+  .app {
+    @include secPaddingBottom;
   }
 }

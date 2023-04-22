@@ -6,6 +6,15 @@
 
   .infos {
     position: relative;
+    padding: 0 0 50px;
+
+    @include media-tabletLg {
+      padding: 0 0 75px;
+    }
+
+    @include media-desktopSm {
+      padding: 0 0 100px;
+    }
 
     .container {
       margin: -75px 0 0;
@@ -15,15 +24,21 @@
         padding: 0 50px;
       }
 
+      @include media-desktopSm {
+        padding: 0 70px;
+      }
+
       .left {
         color: $thirdColor;
         padding: 50px 30px;
         background: $fifthColor;
         border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         border-bottom-left-radius: 20px;
         box-shadow: rgba(99, 99, 99, 0.05) -6px 2px 6px 0px;
 
         @include media-tabletLg {
+          border-top-right-radius: 0;
           width: 40%;
         }
 
@@ -34,7 +49,7 @@
           .iconInfo {
             display: flex;
             align-items: center;
-            padding: 15px 0 0;
+            padding: 20px 0 0;
 
             .icon {
               padding: 0 20px 0 0;
@@ -53,13 +68,13 @@
           }
 
           .name {
-            padding: 25px 0 0;
+            padding: 30px 0 0;
           }
 
           .iconInfo {
             display: flex;
             align-items: center;
-            padding: 15px 0 0;
+            padding: 20px 0 0;
 
             .icon {
               padding: 0 20px 0 0;
@@ -102,11 +117,13 @@
         background: $white;
         color: $forthColor;
         padding: 50px 30px;
-        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         box-shadow: rgba(99, 99, 99, 0.05) 6px 2px 6px 0px;
 
         @include media-tabletLg {
+          border-bottom-left-radius: 0;
+          border-top-right-radius: 20px;
           width: 60%;
         }
 
@@ -127,7 +144,6 @@
           textarea {
             resize: none;
             display: block;
-            max-height: 250px;
             padding: 15px 10px;
             border-radius: 2px;
             width: calc(100% - 20px);
@@ -138,6 +154,14 @@
 
             &::placeholder {
               opacity: 0.5;
+            }
+          }
+
+          textarea {
+            height: 200px;
+
+            @include media-tabletSm {
+              height: 150px;
             }
           }
 

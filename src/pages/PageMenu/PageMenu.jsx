@@ -16,7 +16,7 @@ import dessertImg2 from "../../assets/images/dessert2.jpeg";
 import dessertImg3 from "../../assets/images/dessert3.jpeg";
 import dessertImg4 from "../../assets/images/dessert4.jpeg";
 import dessertImg5 from "../../assets/images/dessert5.jpeg";
-import bgOfferImg from "../../assets/images/pizzaOffer.jpeg";
+import bgOfferImg from "../../assets/images/bgOffer1.jpeg";
 import highlightImg1 from "../../assets/images/pgHome-menu.png";
 import highlightImg2 from "../../assets/images/pgHome-menu2.png";
 import highlightImg3 from "../../assets/images/pgHome-menu3.png";
@@ -24,6 +24,8 @@ import highlightImg3 from "../../assets/images/pgHome-menu3.png";
 import Hero from "../../components/Hero/Hero";
 import BigOffer from "../../components/BigOffer/BigOffer";
 import MealOption from "../../components/MealOption/MealOption";
+import OurLocation from "../../components/OurLocation/OurLocation";
+import DownloadTheApp from "../../components/DownloadTheApp/DownloadTheApp";
 
 export default function PageMenu() {
   return (
@@ -265,6 +267,14 @@ export default function PageMenu() {
             img={dessertImg5}
           />
         </div>
+      </section>
+
+      <section className={css.location}>
+        <OurLocation />
+      </section>
+
+      <section className={css.app}>
+        <DownloadTheApp />
       </section>
     </main>
   );

@@ -13,13 +13,13 @@ import DownloadTheApp from "../../components/DownloadTheApp/DownloadTheApp";
 import imgText1 from "../../assets/images/homeImg1.jpeg";
 import imgText2 from "../../assets/images/homeImg2.jpeg";
 import imgText3 from "../../assets/images/homeImg3.jpeg";
+import smOfferImg1 from "../../assets/images/offer1.jpeg";
+import smOfferImg2 from "../../assets/images/offer2.jpeg";
 import menuImg1 from "../../assets/images/pgHome-menu.png";
+import bgOfferImg from "../../assets/images/bgOffer1.jpeg";
 import menuImg2 from "../../assets/images/pgHome-menu2.png";
 import menuImg3 from "../../assets/images/pgHome-menu3.png";
 import pizzaImg from "../../assets/images/pizzaHomeHero.png";
-import bgOfferImg from "../../assets/images/pizzaOffer.jpeg";
-import smOfferImg1 from "../../assets/images/pizzaOffer2.jpeg";
-import smOfferImg2 from "../../assets/images/pizzaOffer3.jpeg";
 import bgImg from "../../assets/images/homeBackgroundHero.jpeg";
 import bgSocials from "../../assets/images/pizzeria-social.jpeg";
 

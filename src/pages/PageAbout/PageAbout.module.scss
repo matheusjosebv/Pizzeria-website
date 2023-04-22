@@ -3,4 +3,295 @@
 .root {
   overflow-x: hidden;
   background: $fifthColor;
+
+  .story {
+    @include secPadding;
+
+    @include media-tabletLg {
+      display: flex;
+      gap: 30px;
+    }
+
+    @include media-desktopMd {
+      gap: 50px;
+    }
+
+    .left {
+      @include media-tabletLg {
+        width: 60%;
+      }
+
+      .heading {
+        .subTitle {
+          color: $firstColor;
+          letter-spacing: 2px;
+        }
+
+        .title {
+          color: $thirdColor;
+          margin: 15px 0 0;
+        }
+
+        .desc {
+          color: $forthColor;
+          margin: 10px 0 0;
+        }
+      }
+
+      .container {
+        @include media-desktopSm {
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 30px;
+        }
+
+        @include media-desktopMd {
+          gap: 50px;
+        }
+
+        .texts {
+          margin: 50px 0 0;
+
+          @include media-desktopSm {
+            width: 50%;
+          }
+
+          .text {
+            margin: 20px 0 0;
+
+            @include media-desktopSm {
+              &:first-child {
+                margin: 0 0 0;
+              }
+            }
+            .title {
+            }
+
+            .desc {
+              margin: 10px 0 0;
+              color: $forthColor;
+            }
+          }
+        }
+
+        .ownerImg {
+          margin: 50px 0 0;
+
+          @include media-desktopSm {
+            width: 50%;
+          }
+
+          .img {
+            width: 45%;
+
+            @include media-desktopSm {
+              width: 100%;
+            }
+          }
+
+          .desc {
+            margin: 20px 0 0;
+
+            .name {
+              letter-spacing: 2px;
+            }
+
+            .position {
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      margin: 50px 0 0;
+
+      @include media-tabletLg {
+        width: 40%;
+      }
+
+      @include media-desktopMd {
+        margin: 65px 0 0;
+      }
+
+      .img {
+        @include media-tabletLg {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .cuisine {
+    .top {
+      background: url("../../assets/images/about2.jpeg");
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      @include media-tabletLg {
+        background-attachment: fixed;
+      }
+
+      @include secPadding;
+
+      .content {
+        background: $white;
+        padding: 32px 24px;
+
+        @include media-tabletLg {
+          padding: 48px;
+        }
+
+        @include media-desktopSm {
+          width: 39%;
+        }
+
+        .subTitle {
+          letter-spacing: 2px;
+          color: $firstColor;
+        }
+
+        .title {
+          margin: 25px 0 0;
+        }
+
+        .desc {
+          color: $forthColor;
+          margin: 25px 0 0;
+        }
+
+        .topics {
+          .topic {
+            margin: 30px 0 0;
+
+            @include media-tabletLg {
+              display: flex;
+              gap: 20px;
+            }
+
+            .left {
+              .icon {
+                color: $firstColor;
+                width: 25px;
+                height: 25px;
+
+                @include media-tabletLg {
+                  margin: 5px 0 0;
+                }
+              }
+            }
+
+            .right {
+              .title {
+                margin: 12px 0 0;
+
+                @include media-tabletLg {
+                  margin: 0;
+                }
+              }
+
+              .desc {
+                color: $forthColor;
+                @include media-tabletLg {
+                  margin: 5px 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      background: url("../../assets/images/about1.jpeg");
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      @include media-tabletLg {
+        background-attachment: fixed;
+      }
+
+      @include secPadding;
+
+      .content {
+        background: $white;
+        padding: 32px 24px;
+
+        @include media-tabletLg {
+          padding: 48px;
+        }
+
+        @include media-desktopSm {
+          margin: 0 0 0 auto;
+          width: 39%;
+        }
+
+        .subTitle {
+          letter-spacing: 2px;
+          color: $firstColor;
+        }
+
+        .title {
+          margin: 25px 0 0;
+        }
+
+        .desc {
+          color: $forthColor;
+          margin: 25px 0 0;
+        }
+
+        .topics {
+          .topic {
+            margin: 30px 0 0;
+
+            @include media-tabletLg {
+              display: flex;
+              gap: 20px;
+            }
+
+            .left {
+              .icon {
+                color: $firstColor;
+                width: 25px;
+                height: 25px;
+
+                @include media-tabletLg {
+                  margin: 5px 0 0;
+                }
+              }
+            }
+
+            .right {
+              .title {
+                margin: 12px 0 0;
+
+                @include media-tabletLg {
+                  margin: 0;
+                }
+              }
+
+              .desc {
+                color: $forthColor;
+                @include media-tabletLg {
+                  margin: 5px 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .franchise {
+    @include secPadding;
+  }
+
+  .app {
+    @include secPaddingBottom;
+  }
 }

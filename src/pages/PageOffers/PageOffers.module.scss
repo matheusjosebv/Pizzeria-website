@@ -8,7 +8,7 @@
   .offers {
     @include secPadding;
 
-    .title {
+    .heading {
       display: flex;
       justify-content: center;
     }
@@ -49,10 +49,16 @@
 
       @include media-tabletSm {
         height: 60vw;
+        max-height: 400px;
       }
 
       @include media-tabletLg {
         height: 50vw;
+        max-height: 500px;
+      }
+
+      @include media-desktopSm {
+        max-height: 550px;
       }
 
       .blackBackground {
@@ -101,15 +107,27 @@
 
         @include media-tabletSm {
           background: transparent;
-          padding: 25px 50px;
+          padding: 25px 60px;
         }
 
         @include media-tabletLg {
-          padding: 25px 70px;
+          padding: 30px 85px;
+        }
+
+        @include media-desktopSm {
+          padding: 40px 100px;
         }
 
         .title {
           text-transform: uppercase;
+
+          @include media-desktopSm {
+            font-size: 48px;
+          }
+
+          @include media-desktopMd {
+            font-size: 56px;
+          }
         }
 
         .desc {
@@ -117,15 +135,19 @@
           padding: 15px 0 0;
 
           @include media-tabletSm {
-            width: 85%;
+            width: 65%;
+            padding: 10px 0 0;
           }
 
           @include media-tabletLg {
+            width: 55%;
             font-size: 16px;
+            padding: 20px 0 0;
           }
 
           @include media-desktopSm {
-            font-size: 17px;
+            font-size: 18px;
+            width: 50%;
           }
 
           @include media-desktopMd {
@@ -136,6 +158,14 @@
         .btn {
           width: auto;
           margin: 15px 0 0;
+
+          @include media-tabletSm {
+            margin: 10px 0 0;
+          }
+
+          @include media-tabletLg {
+            margin: 25px 0 0;
+          }
         }
       }
     }
