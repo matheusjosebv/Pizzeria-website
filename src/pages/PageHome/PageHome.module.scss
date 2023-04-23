@@ -45,8 +45,8 @@
 
     .highlights {
       @include media-tabletLg {
-        display: flex;
         gap: 50px;
+        display: flex;
       }
 
       @include media-desktopSm {
@@ -72,8 +72,8 @@
 
   .services {
     position: relative;
-    color: $white;
 
+    color: $white;
     background: url("../../assets/images/pizzeria-template-delivery-section-img-bg.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -200,9 +200,10 @@
         background-color: $firstColor;
 
         @include media-tabletLg {
+          position: absolute;
+
           width: 50%;
           height: 50%;
-          position: absolute;
         }
 
         .contentWrapper {
@@ -251,8 +252,8 @@
 
             .text {
               .title {
-                padding: 20px 0 0;
                 font-weight: 500;
+                padding: 20px 0 0;
 
                 @include media-tabletLg {
                   padding: 0;

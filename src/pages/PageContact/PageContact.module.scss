@@ -5,8 +5,8 @@
   background: $fifthColor;
 
   .infos {
-    position: relative;
     padding: 0 0 50px;
+    position: relative;
 
     @include media-tabletLg {
       padding: 0 0 75px;
@@ -43,9 +43,6 @@
         }
 
         .propertyInfo {
-          .title {
-          }
-
           .iconInfo {
             display: flex;
             align-items: center;
@@ -54,9 +51,6 @@
             .icon {
               padding: 0 20px 0 0;
               color: $firstColor;
-            }
-
-            .info {
             }
           }
         }
@@ -64,33 +58,24 @@
         .ownerInfo {
           padding: 50px 0 0;
 
-          .title {
-          }
-
           .name {
             padding: 30px 0 0;
           }
 
           .iconInfo {
             display: flex;
-            align-items: center;
             padding: 20px 0 0;
+            align-items: center;
 
             .icon {
               padding: 0 20px 0 0;
               color: $firstColor;
-            }
-
-            .info {
             }
           }
         }
 
         .socialMedia {
           padding: 50px 0 0;
-
-          .title {
-          }
 
           .socials {
             gap: 25px;
@@ -105,8 +90,8 @@
               transition: 0.3s transform, 0.3s color;
 
               &:hover {
-                transform: scale(1.1);
                 color: $secondColor;
+                transform: scale(1.1);
               }
             }
           }
@@ -122,9 +107,9 @@
         box-shadow: rgba(99, 99, 99, 0.05) 6px 2px 6px 0px;
 
         @include media-tabletLg {
+          width: 60%;
           border-bottom-left-radius: 0;
           border-top-right-radius: 20px;
-          width: 60%;
         }
 
         .heading {
@@ -149,7 +134,7 @@
             width: calc(100% - 20px);
             max-width: calc(100% - 20px);
             min-width: calc(100% - 20px);
-            background: rgba($light-gray, 0.35);
+            background: rgba($lightGray, 0.35);
             border: 1px solid rgba($forthColor, 0.2);
 
             &::placeholder {
@@ -166,17 +151,17 @@
           }
 
           .fullNameInputs {
-            display: flex;
-            width: 100%;
             gap: 10px;
+            width: 100%;
+            display: flex;
 
             .first,
             .last {
               width: 50%;
-              padding: 15px 10px;
-              margin: 5px 0 20px;
               max-width: unset;
               min-width: unset;
+              padding: 15px 10px;
+              margin: 5px 0 20px;
             }
           }
 
@@ -211,8 +196,8 @@
         }
 
         .submitBtn {
-          margin: 15px 0 0;
           width: auto;
+          margin: 15px 0 0;
         }
       }
     }

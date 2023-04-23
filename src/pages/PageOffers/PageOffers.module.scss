@@ -19,8 +19,8 @@
 
     .smallOffers {
       @include media-tabletSm {
-        display: flex;
         gap: 25px;
+        display: flex;
         padding: 0 0 25px;
       }
 
@@ -106,8 +106,8 @@
         border-bottom-right-radius: 10px;
 
         @include media-tabletSm {
-          background: transparent;
           padding: 25px 60px;
+          background: transparent;
         }
 
         @include media-tabletLg {
@@ -146,8 +146,8 @@
           }
 
           @include media-desktopSm {
-            font-size: 18px;
             width: 50%;
+            font-size: 18px;
           }
 
           @include media-desktopMd {

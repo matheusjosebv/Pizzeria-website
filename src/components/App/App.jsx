@@ -1,4 +1,5 @@
 import "./App.module.scss";
+import ScrollToTop from "../../hooks/ScrollToTop";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import Navbar from "../../containers/Navbar/Navbar";
@@ -8,26 +9,21 @@ import PageMenu from "../../pages/PageMenu/PageMenu";
 import PageAbout from "../../pages/PageAbout/PageAbout";
 import PageOffers from "../../pages/PageOffers/PageOffers";
 import PageContact from "../../pages/PageContact/PageContact";
+import PageNotFound from "../../pages/PageNotFound/PageNotFound";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route index element={<PageHome />} />
-        </Routes>
-        <Routes>
           <Route path="/menu" element={<PageMenu />} />
-        </Routes>
-        <Routes>
           <Route path="/offers" element={<PageOffers />} />
-        </Routes>
-        <Routes>
           <Route path="/about" element={<PageAbout />} />
-        </Routes>
-        <Routes>
           <Route path="/contact" element={<PageContact />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

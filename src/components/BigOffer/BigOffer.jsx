@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import css from "./BigOffer.module.scss";
-import svg from "../../assets/images/svg.svg";
+import svg from "../../assets/svgs/svg.svg";
 import CustomClearance from "../CustomClearance/CustomClearance";
 
 export default function BigOffer({

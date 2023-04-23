@@ -5,11 +5,11 @@
   background: $fifthColor;
 
   .highlights {
-    position: relative;
-    @include secPadding;
-
     display: flex;
+    position: relative;
     justify-content: space-between;
+
+    @include secPadding;
 
     margin-top: -100px;
 
@@ -23,8 +23,8 @@
 
     .meal {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      flex-direction: column;
 
       .img {
         width: 75%;
@@ -36,8 +36,8 @@
       }
 
       .title {
-        color: $firstColor;
         padding: 10px 0 0;
+        color: $firstColor;
       }
     }
 
@@ -51,11 +51,11 @@
 
     .heading {
       display: flex;
+      padding: 0 0 50px;
       text-align: center;
       align-items: center;
       flex-direction: column;
-      border-bottom: 2px solid $light-gray;
-      padding: 0 0 50px;
+      border-bottom: 2px solid $lightGray;
 
       @include media-desktopSm {
         text-align: left;
@@ -89,8 +89,8 @@
       }
 
       @include media-desktopSm {
-        margin: 70px 0 0;
         gap: 20px;
+        margin: 70px 0 0;
         flex-direction: row;
         justify-content: space-between;
       }
@@ -103,8 +103,8 @@
         margin: 70px 0 0;
 
         @include media-desktopSm {
-          margin: 0;
           flex: 50%;
+          margin: 0;
         }
       }
     }
@@ -119,11 +119,11 @@
 
     .heading {
       display: flex;
+      padding: 0 0 50px;
       text-align: center;
       align-items: center;
       flex-direction: column;
-      border-bottom: 2px solid $light-gray;
-      padding: 0 0 50px;
+      border-bottom: 2px solid $lightGray;
 
       @include media-desktopSm {
         text-align: left;
@@ -148,8 +148,8 @@
     .createArea {
       .wrapper {
         @include media-desktopSm {
-          display: flex;
           gap: 75px;
+          display: flex;
         }
 
         @include media-desktopMd {
@@ -164,12 +164,11 @@
 
           .step {
             display: flex;
+            padding: 50px 0;
             text-align: center;
             align-items: center;
             flex-direction: column;
-
-            padding: 50px 0;
-            border-bottom: 2px solid $light-gray;
+            border-bottom: 2px solid $lightGray;
 
             @include media-tabletSm {
               text-align: left;
@@ -198,12 +197,11 @@
         .right {
           .step {
             display: flex;
+            padding: 50px 0;
             text-align: center;
             align-items: center;
             flex-direction: column;
-
-            padding: 50px 0;
-            border-bottom: 2px solid $light-gray;
+            border-bottom: 2px solid $lightGray;
 
             @include media-tabletSm {
               text-align: left;
@@ -211,10 +209,10 @@
             }
 
             @include media-desktopSm {
-              border-bottom: unset;
-              border-left: 2px solid $light-gray;
-              padding: 0 0 0 75px;
               margin: 75px 0 0;
+              padding: 0 0 0 75px;
+              border-bottom: unset;
+              border-left: 2px solid $lightGray;
             }
 
             @include media-desktopMd {
@@ -255,13 +253,14 @@
               }
 
               .topping {
-                margin: 15px auto 0;
+                display: flex;
+                text-align: center;
+                align-items: center;
+
                 font-weight: 400;
                 color: $forthColor;
+                margin: 15px auto 0;
                 font-family: "Source Sans Pro";
-                display: flex;
-                align-items: center;
-                text-align: center;
 
                 @include media-desktopSm {
                   width: 50%;
@@ -270,12 +269,13 @@
                 &::before {
                   top: 10px;
                   left: -25px;
+                  width: 16px;
+                  height: 16px;
+
                   content: "";
+                  border: 1px solid;
                   margin: 0 10px 0 0;
                   display: inline-block;
-                  height: 16px;
-                  width: 16px;
-                  border: 1px solid;
                 }
               }
             }
@@ -290,11 +290,11 @@
 
     .heading {
       display: flex;
+      padding: 0 0 50px;
       text-align: center;
       align-items: center;
       flex-direction: column;
-      border-bottom: 2px solid $light-gray;
-      padding: 0 0 50px;
+      border-bottom: 2px solid $lightGray;
 
       @include media-desktopSm {
         text-align: left;
@@ -328,8 +328,8 @@
       }
 
       @include media-desktopSm {
-        margin: 70px 0 0;
         gap: 20px;
+        margin: 70px 0 0;
         flex-direction: row;
         justify-content: space-between;
       }
@@ -342,8 +342,8 @@
         margin: 70px 0 0;
 
         @include media-desktopSm {
-          margin: 0;
           flex: 50%;
+          margin: 0;
         }
       }
     }

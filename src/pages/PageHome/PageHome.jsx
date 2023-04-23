@@ -1,12 +1,13 @@
 import classNames from "classnames";
 import css from "./PageHome.module.scss";
-
 import Hero from "../../components/Hero/Hero";
 import Heading from "../../components/Heading/Heading";
 import ImgText from "../../components/ImgText/ImgText";
 import BigOffer from "../../components/BigOffer/BigOffer";
 import AppRating from "../../components/AppRating/AppRating";
 import SmallOffer from "../../components/SmallOffer/SmallOffer";
+import OurLocation from "../../components/OurLocation/OurLocation";
+import CustomButton from "../../components/CustomButton/CustomButton";
 import IconTextLink from "../../components/IconTextLink/IconTextLink";
 import DownloadTheApp from "../../components/DownloadTheApp/DownloadTheApp";
 
@@ -24,16 +25,8 @@ import bgImg from "../../assets/images/homeBackgroundHero.jpeg";
 import bgSocials from "../../assets/images/pizzeria-social.jpeg";
 
 import { MdPhoneIphone } from "react-icons/md";
-import {
-  FaBox,
-  FaPizzaSlice,
-  FaGooglePlay,
-  FaAppStore,
-  FaInstagram,
-  FaUtensilSpoon,
-} from "react-icons/fa";
-import OurLocation from "../../components/OurLocation/OurLocation";
-import CustomButton from "../../components/CustomButton/CustomButton";
+import { FaBox, FaGooglePlay, FaInstagram } from "react-icons/fa";
+import { FaPizzaSlice, FaAppStore, FaUtensilSpoon } from "react-icons/fa";
 
 export default function PageHome() {
   return (
@@ -42,8 +35,8 @@ export default function PageHome() {
         bgImg={bgImg}
         title="Authentic Italian Pizzeria"
         desc="Et praesent nulla urna consequat dui arcu cursus diam fringilla
-            libero risus, aliquam diam, aliquam ullamcorper urna pulvinar velit
-            suspendisse aliquam lacus sollicitudin mauris."
+        libero risus, aliquam diam, aliquam ullamcorper urna pulvinar velit
+        suspendisse aliquam lacus sollicitudin mauris."
         firstBtn="Book a Table"
         secondBtn="Order Online"
       />
@@ -62,8 +55,8 @@ export default function PageHome() {
           />
           <ImgText
             img={imgText2}
-            className={classNames(css.imgText, css.middleImgText)}
             title="Handmade Mozarella"
+            className={classNames(css.imgText, css.middleImgText)}
             desc="Feugiat neque, rhoncus suspendisse proin amet aliquet diam pretium condimentum nisl tempus risus imperdiet egestas sit."
           />
           <ImgText
@@ -85,22 +78,22 @@ export default function PageHome() {
 
           <div className={css.iconTextLinks}>
             <IconTextLink
-              className={css.iconTextLink}
+              link="Order Online"
               title="Online Delivery"
               icon={<MdPhoneIphone />}
-              link="Order Online"
+              className={css.iconTextLink}
             />
             <IconTextLink
-              className={css.iconTextLink}
-              title="Click & Collect"
               icon={<FaBox />}
               link="Takeout Order"
+              title="Click & Collect"
+              className={css.iconTextLink}
             />
             <IconTextLink
-              className={css.iconTextLink}
-              title="Restaurant Dining"
-              icon={<FaPizzaSlice />}
               link="Book a Table"
+              icon={<FaPizzaSlice />}
+              title="Restaurant Dining"
+              className={css.iconTextLink}
             />
           </div>
         </div>
@@ -108,35 +101,35 @@ export default function PageHome() {
 
       <section className={css.menu}>
         <Heading
+          to="/menu"
+          btn="view all menu"
           subTitle="Choose Your Flavors"
           title="Food that brings people together"
           desc="Cursus ultricies in maecenas pulvinar ultrices integer quam amet,
           semper dictumst sit interdum ut venenatis pellentesque nunc."
-          to="/menu"
-          btn="view all menu"
         />
 
         <div className={css.highlights}>
           <ImgText
-            className={css.meal}
+            imgAnim
+            to="/menu"
             title="Pasta"
             img={menuImg1}
-            imgAnim
-            to="/menu"
+            className={css.meal}
           />
           <ImgText
-            className={classNames(css.meal, css.middleMeal)}
+            imgAnim
+            to="/menu"
             title="Pizza"
             img={menuImg2}
-            imgAnim
-            to="/menu"
+            className={classNames(css.meal, css.middleMeal)}
           />
           <ImgText
-            className={css.meal}
-            title="Desert"
-            img={menuImg3}
             imgAnim
             to="/menu"
+            title="Desert"
+            img={menuImg3}
+            className={css.meal}
           />
         </div>
       </section>
@@ -154,35 +147,35 @@ export default function PageHome() {
 
         <div className={css.offersWrapper}>
           <BigOffer
-            className={css.bigOffer}
-            bgImg={bgOfferImg}
-            number="15"
             red
+            price="18"
+            number="15"
+            bgImg={bgOfferImg}
             subTitle="Daily Deal!"
             title="Big Meat Monsta"
+            className={css.bigOffer}
             desc="Cursus ultricies in maecenas pulvinar ultrices integer quam amet"
-            price="18"
           />
 
           <div className={css.smallOffers}>
             <SmallOffer
-              className={css.smallOffer}
-              bgImg={smOfferImg1}
-              number="40"
-              yellow
-              title="Combo Double Box"
-              price="24"
               type1
+              yellow
+              price="24"
+              number="40"
+              bgImg={smOfferImg1}
+              title="Combo Double Box"
+              className={css.smallOffer}
             />
             <SmallOffer
-              className={css.smallOffer}
-              bgImg={smOfferImg2}
-              number="25"
               red
-              title="Italian Box Special"
-              desc="Starting at"
-              price="26"
               type2
+              price="26"
+              number="25"
+              desc="Starting at"
+              bgImg={smOfferImg2}
+              className={css.smallOffer}
+              title="Italian Box Special"
             />
           </div>
         </div>
@@ -194,12 +187,12 @@ export default function PageHome() {
 
       <section className={css.franchise}>
         <Heading
+          flex
+          to="/contact"
+          btn="Get in Touch"
           subTitle="Join The Table"
           title="Franchise Opportunities"
           desc="Fermentum non quis vitae viverra ipsum eget tincidunt consequat ac velit leo, rutrum tellus augue dolor leo massa augue rhoncus pellentesque pulvinar pellentesque potenti cras arcu praesent urna a, vitae mattis pellentesque rhoncus cursus enim ac eu justo."
-          to="/contact"
-          btn="Get in Touch"
-          flex
         />
       </section>
 
@@ -230,31 +223,31 @@ export default function PageHome() {
           </div>
 
           <img
-            className={css.background}
             src={bgSocials}
             alt="instagram images"
+            className={css.background}
           />
         </div>
 
         <div className={css.bottom}>
           <div className={css.ratings}>
             <AppRating
-              className={css.rating}
-              icon={<FaGooglePlay />}
               rating="4.9"
               numReviews="1234"
+              className={css.rating}
+              icon={<FaGooglePlay />}
             />
             <AppRating
-              className={css.rating}
-              icon={<FaAppStore />}
               rating="4.6"
               numReviews="2345"
+              className={css.rating}
+              icon={<FaAppStore />}
             />
             <AppRating
-              className={css.rating}
-              icon={<FaUtensilSpoon />}
               rating="4.3"
               numReviews="678"
+              className={css.rating}
+              icon={<FaUtensilSpoon />}
             />
           </div>
         </div>

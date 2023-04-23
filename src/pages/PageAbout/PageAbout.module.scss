@@ -8,8 +8,8 @@
     @include secPadding;
 
     @include media-tabletLg {
-      display: flex;
       gap: 30px;
+      display: flex;
     }
 
     @include media-desktopMd {
@@ -28,21 +28,21 @@
         }
 
         .title {
-          color: $thirdColor;
           margin: 15px 0 0;
+          color: $thirdColor;
         }
 
         .desc {
-          color: $forthColor;
           margin: 10px 0 0;
+          color: $forthColor;
         }
       }
 
       .container {
         @include media-desktopSm {
+          gap: 30px;
           display: flex;
           flex-direction: row-reverse;
-          gap: 30px;
         }
 
         @include media-desktopMd {
@@ -63,8 +63,6 @@
               &:first-child {
                 margin: 0 0 0;
               }
-            }
-            .title {
             }
 
             .desc {
@@ -95,9 +93,6 @@
             .name {
               letter-spacing: 2px;
             }
-
-            .position {
-            }
           }
         }
       }
@@ -125,7 +120,6 @@
   .cuisine {
     .top {
       background: url("../../assets/images/about2.jpeg");
-
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -149,8 +143,8 @@
         }
 
         .subTitle {
-          letter-spacing: 2px;
           color: $firstColor;
+          letter-spacing: 2px;
         }
 
         .title {
@@ -158,8 +152,8 @@
         }
 
         .desc {
-          color: $forthColor;
           margin: 25px 0 0;
+          color: $forthColor;
         }
 
         .topics {
@@ -167,15 +161,15 @@
             margin: 30px 0 0;
 
             @include media-tabletLg {
-              display: flex;
               gap: 20px;
+              display: flex;
             }
 
             .left {
               .icon {
-                color: $firstColor;
                 width: 25px;
                 height: 25px;
+                color: $firstColor;
 
                 @include media-tabletLg {
                   margin: 5px 0 0;
@@ -206,7 +200,6 @@
 
     .bottom {
       background: url("../../assets/images/about1.jpeg");
-
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -226,13 +219,13 @@
         }
 
         @include media-desktopSm {
-          margin: 0 0 0 auto;
           width: 39%;
+          margin: 0 0 0 auto;
         }
 
         .subTitle {
-          letter-spacing: 2px;
           color: $firstColor;
+          letter-spacing: 2px;
         }
 
         .title {
@@ -240,8 +233,8 @@
         }
 
         .desc {
-          color: $forthColor;
           margin: 25px 0 0;
+          color: $forthColor;
         }
 
         .topics {
@@ -249,15 +242,15 @@
             margin: 30px 0 0;
 
             @include media-tabletLg {
-              display: flex;
               gap: 20px;
+              display: flex;
             }
 
             .left {
               .icon {
-                color: $firstColor;
                 width: 25px;
                 height: 25px;
+                color: $firstColor;
 
                 @include media-tabletLg {
                   margin: 5px 0 0;
@@ -276,6 +269,7 @@
 
               .desc {
                 color: $forthColor;
+
                 @include media-tabletLg {
                   margin: 5px 0 0;
                 }

@@ -6,7 +6,7 @@ import OurLocation from "../../components/OurLocation/OurLocation";
 import SmallOffer from "../../components/SmallOffer/SmallOffer";
 import DownloadTheApp from "../../components/DownloadTheApp/DownloadTheApp";
 
-import svg from "../../assets/images/svg2.svg";
+import svg from "../../assets/svgs/svg2.svg";
 import bgImg from "../../assets/images/offersHero.jpeg";
 import offerImg1 from "../../assets/images/offer1.jpeg";
 import offerImg2 from "../../assets/images/offer2.jpeg";
